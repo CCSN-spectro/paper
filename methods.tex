@@ -53,7 +53,8 @@ If the reconstruction is set to start at the end of the signal, the g-modes will
 This g-mode reconstruction method works if and only if the signal is strong enough to provide information about the g-mode, which is reflected in the spectrogram.
 
 \subsection{ Confidence bands}
-A description of how they are built.  This is important because these bands are used to calculate the coverage probabilities in our simulation studies.
+Given the sequence of g-mode estimates, the confidence band will be calculated by using the model defined in \eqref{eq:universal}. The g-mode estimates are frequency values which we use as predictors in the model in order to generate confidence intervals for the ratios. Since the g-mode estimates are indexed by time, the confidence intervals for the ratios are too.  Thus, we generate the confidence band by interpolating the lower and upper limits of the collection of consecutive confidence intervals, which will be valid for the time range of the g-mode estimates.  This confidence band is used to estimate the coverage probabilities in our simulation studies presented below.  
+
 
 
 
