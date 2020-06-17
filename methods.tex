@@ -1,6 +1,6 @@
 \section{Methods description}
 In this section, we outline a strategy for estimating the time evolution of the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ of the mass of the proto-neutron star (PNS) and its squared radius \textcolor{red}{(units, solar Mass and km?)} based on
-the CCSN gravitational wave observations.
+the gravitational wave observations.
 An integral part of this strategy is the universal relationship between the characteristic frequency and the ratio of mass and radius as demonstrated by  \cite{Torres:2019}
 on 25 1D simulations with the
 {\sc AENUS-ALCAR }code \cite{} and the {\sc CoCoNuT} \cite{} code. Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polynomial regression with
@@ -13,12 +13,12 @@ where $\epsilon_i$ are assumed to be independent zero-mean Gaussian errors with 
 \log \sigma_i=\alpha_0+ \alpha_1 f_i + \alpha_2 f_i^2 + \delta_i
 \end{equation}
 with independent and identically zero-mean Gaussian errors $\delta_i$. The R-package LMVAR
-{\textcolor{red}{add citation} that implements a maximum likelihood approach was used to fit the model. The
+\cite{lmvar:2019} that implements a maximum likelihood approach was used to fit the model. The
 best fitting model amongst polynomials of degree 1, 2, and 3  was chosen according to the  AIC, i.e. \textcolor{red}{insert correct estimates}
 \begin{equation}\label{eq:universal}
 r_i=f_i + f_i^3 + \epsilon_i
 \end{equation}
- The best-fitting model achieves a coefficient of determination of $R^2=$  \textcolor{red}{insert Rsquared}.
+ The best-fitting model achieves a coefficient of determination of $R^2=0.9812$.
 Parameter estimates and their standard errors are given in \textcolor{red}{ add Table xxx}.
 The data and fit of the model including 95\% confidence bands are displayed in Figure \ref{Fig:LMVAR}.
 \begin{figure}
