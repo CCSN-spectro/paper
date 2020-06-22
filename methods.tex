@@ -1,35 +1,58 @@
 \section{Methods description}
-In this section, we outline a strategy for estimating the time evolution of the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ of the mass of the proto-neutron star (PNS) and its squared radius \textcolor{red}{(units, solar Mass and km?)} based on
-the gravitational wave observations.
-An integral part of this strategy is the universal relationship between the characteristic frequency and the ratio of mass and radius as demonstrated by  \cite{Torres:2019}
-on 25 1D simulations with the
-{\sc AENUS-ALCAR }code \cite{} and the {\sc CoCoNuT} \cite{} code. Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polynomial regression with
-heteroscedastic errors
+In this section, we outline a strategy for estimating the time evolution of the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ of the mass of the proto-neutron star (PNS) and its squared radius (in units of solar mass and km) from the gravitational wave observations.
+An integral part of this strategy is the universal relationship between the characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes and a combination of the mass, the radius of the PNS, the shock radius and the total mass inside the shock as demonstrated by \cite{Torres:2019}. In this paper we focus on the $^2g_2$ mode. 
+
+Using 25 1D simulations obtained with the {\sc AENUS-ALCAR }code \cite{} and the {\sc CoCoNuT} \cite{} code, we parametrize the ratio with a cubic polynomial regression with heteroscedastic errors
+%Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polyn
 \begin{equation}
 r_i=\beta_1 f_i + \beta_2 f_i^2 +\beta_3 f_i^3 + \epsilon_i
 \end{equation}
-where $\epsilon_i$ are assumed to be independent zero-mean Gaussian errors with  variances $\sigma_i^2$ that increase with $f_i$. The model for frequency-dependent variances is
+where $\epsilon_i$ are assumed to be independent zero-mean Gaussian errors with  variances $\sigma_i^2$ that increase with frequency $f_i$. The model for frequency-dependent variances is
 \begin{equation}
 \log \sigma_i=\alpha_0+ \alpha_1 f_i + \alpha_2 f_i^2 + \delta_i
 \end{equation}
 with independent and identically zero-mean Gaussian errors $\delta_i$. The R-package LMVAR
-\cite{lmvar:2019} that implements a maximum likelihood approach was used to fit the model. The
-best fitting model amongst polynomials of degree 1, 2, and 3  was chosen according to the  AIC, i.e. \textcolor{red}{insert correct estimates}
+\cite{lmvar:2019} that implements a maximum likelihood approach was used to fit the model. The best
+fitting model amongst polynomials of degree 1, 2, and 3  was chosen according to the Aikaike information
+criterion with coefficients given in Table \ref{tab:model},
+
 \begin{equation}\label{eq:universal}
-r_i=f_i + f_i^3 + \epsilon_i
+r_i = \beta_1 f_i + \beta_3 f_i^3 + \epsilon_i
 \end{equation}
- The best-fitting model achieves a coefficient of determination of $R^2=0.9812$.
-Parameter estimates and their standard errors are given in \textcolor{red}{ add Table xxx}.
+
+The best-fitting model achieves a coefficient of determination of $R^2=0.9812$.
 The data and fit of the model including 95\% confidence bands are displayed in Figure \ref{Fig:LMVAR}.
+
+\begin{table}[h]
+  \begin{tabular}{lll}
+    \hline
+    Coefficient & Estimate & standard error \\
+    \hline
+    $\beta_1$   & $6.09 \times 10^{-7}$ & $1.75 \times 10^{-8}$ \\
+    $\beta_3$   & $6.24 \times 10^{-13}$ & $8.79 \times 10^{-15}$ \\
+    \hline
+  \end{tabular}
+\label{tab:model}
+\caption{Estimate and standard error of the coefficients of the best fit model describing the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ as function of the frequency of the $^2g_2$ mode.}
+\end{table}
+
 \begin{figure}
  \centering
- 	\includegraphics[width=0.5\textwidth,height=0.3\textheight]{model.pdf}
+ \includegraphics[width=0.5\textwidth,height=0.3\textheight]{model.pdf}
  \caption{Data from 25 1D simulations {\sc AENUS-ALCAR } and {\sc CoCoNuT}  code, solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands.} \label{Fig:LMVAR}
 \end{figure}
 
-Here we analyse the gravitational wave signal {\tt s20-gw-10kpc} \textcolor{red}{insert more detailed description}, originally sampled at 10 kHz but resampled to the LIGO sampling rate of 16384 Hz.
-A spectrogram of this signal is shown in Figure \textcolor{red}{insert spectrogram of signal} based on autoregressive estimates of the local spectra for successive time intervals of 
+We consider the gravitational wave signal {\tt s20-gw-10kpc} described in Section \ref{sec:simulation}, originally sampled at 20 kHz but resampled to the LIGO sampling rate of 16384 Hz.
+A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on autoregressive estimates of the local spectra for successive time intervals of 
 \textcolor{red}{length 200} with a \textcolor{red}{ 90\%} overlap.The dominant emission mode correspondes to the $\mbox{ }^2 g_1$-mode \cite{} and we have developed a time-frequency method to track the ridge $m(t)$ in the spectrogram, taking into account that it is monotonically increasing. Starting from either the left- or right-most column of the time-frequency  matrix we identify and trace the sequence of amplitude peaks within a certain frequency band given the monotonicity constraint. \textcolor{red}{Are more details regarding the ridge tracking required here?}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.5\textwidth,height=0.3\textheight]{plots/spectrogram.pdf}
+ \caption{Spectrogram} \label{fig:spec}
+\end{figure}
+
+
 
 We identify the instantaneous frequency $f(t_i)$ corresponding the  ridge $m(t_i)$ for the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
 for values in between the $t_i$. Now we can use the universal relationship in (\ref{eq:universal}) to obtain estimates of the time evolution of the
