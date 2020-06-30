@@ -1,0 +1,12 @@
+\section{G-mode reconstruction}
+
+Given the spectrogram and an specified time interval for the g-mode reconstruction, our proposal method works as follows.  The starting point must be specified.  It can be either at the beginning or at the end of the signal.  Then, in one of these extremes, the maximum energy value is identified, registering its frequency.  This is done independently for a number of consecutive time intervals.  Then we calculate the median of these frequency values, providing a robust starting value for the g-mode reconstruction.
+
+The starting frequency value is the first g-mode estimate for the first or the last time interval, depending on the specified starting location.  If the reconstruction is set to start at the beginning of the signal, the reconstruction will be done progressively over the time intervals, where each maximum frequency value will be calculated within a frequency range specified by the previous g-mode estimate.  Given the non-decreasing behaviour of the true g-mode values, the g-mode estimates will be forced to be greater or equal than the one estimated for its previous time interval, and lower than a specified upper limit.  As a result, the g-modes estimates will be a non-decreasing sequence of frequency values. 
+
+If the reconstruction is set to start at the end of the signal, the g-modes will be estimated backward in time.  Each maximum frequency is calculated within a range determined by its successor (in time) g-mode estimate.  These estimates are forced to be lower or equal than its successor (in time) estimate, but greater than a specified lower limit. Thus, a non-decreasing sequence of g-mode estimates is guaranteed.
+
+This g-mode reconstruction method works if and only if the signal is strong enough to provide information about the g-mode, which is reflected in the spectrogram.
+
+
+Given the sequence of g-mode estimates, the confidence band will be calculated by using the model defined in \eqref{eq:universal}. The g-mode estimates are frequency values which we use as predictors in the model in order to generate confidence intervals for the ratios. Since the g-mode estimates are indexed by time, the confidence intervals for the ratios are too.  Thus, we generate the confidence band by interpolating the lower and upper limits of the collection of consecutive confidence intervals, which will be valid for the time range of the g-mode estimates.  This confidence band is used to estimate the coverage probabilities in our simulation studies presented below.  

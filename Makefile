@@ -1,14 +1,12 @@
-all: ccsn.pdf
-
-
 OUTS= ccsn #
 PLOTS=$(addsuffix .pdf, $(addprefix plots/, $(OUTS)))
 
+all: ccsn.pdf
 
-ccsn.pdf: ccsn.tex introduction.tex methods.tex noisestudy.tex discussion.tex biblio.bib
+ccsn.pdf: ccsn.tex introduction.tex methods.tex results.tex discussion.tex biblio.bib
 	pdflatex ccsn.tex
 	bibtex ccsn
 	pdflatex ccsn.tex
 	pdflatex ccsn.tex
 
-
+clean: rm ccsn.pdf *.out *aux *bbl *blg *log *toc *.ptb *.tod *.fls *.fdb_latexmk *.lof
