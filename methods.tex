@@ -1,9 +1,11 @@
 \section{Methods description}
+\label{methods}
+
 In this section, we outline a strategy for estimating the time evolution of the
 ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ of the mass of the PNS and its squared radius
 (in units of solar mass and km) from the observation of the $\mbox{}^2g_2$
 oscillation mode in the gravitational wave detector data.
-An integral part of this strategy is the universal relationships that relate the
+An integral part of this strategy is the universal relations that relate the
 characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes with the mass
 and the radius of the PNS, the shock radius and the total mass inside the shock as
 demonstrated in \cite{Torres:2019}.
@@ -54,7 +56,7 @@ Figure \ref{fig:LMVAR}.
 \end{figure}
 
 To develop the method we considered the gravitational wave signal
-{\tt s20-gw-10kpc} described in Section \ref{sec:simulation}, originally
+{\tt s20-gw-10kpc} described in Section \ref{sec:simulations}, originally
 sampled at 16384 Hz but resampled at 4096 Hz.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
 autoregressive estimates of the local spectra for successive time intervals of 
@@ -77,9 +79,9 @@ details on the reconstruction of the $g$ mode ridge.
 \end{figure}
 
 
-We identify the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_i)$ for
+We collect the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_i)$ for
 the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
-for values in between the $t_i$. We then use the equation (\ref{eq:universal}) to obtain
+for values in between the $t_i$. We then use equation (\ref{eq:universal}) to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
 An exemple is given in Figure \ref{fig:ratio} where the red points are the point estimates and
 the grey bands represent 95\% confidence bands. The black points are the true ratio values
@@ -92,18 +94,10 @@ computed using the mass and radius values obtained from the simulation code.
 \end{figure}
 
 
-%In this case without any noise, the coverage of our 95\% confidence band is xx\%.
+In this case, for a GW signal without any noise, the coverage of our 95\% confidence band is 94\%.
+In the next section we explore how accurately we can estimate $r(t)$ when the gravitational wave
+signal is embedded in noise.
 
-In the following simulation study we explore how accurately we can estimate the parameters
-when the gravitational wave signal is embedded in noise.
-For that purpose, we inject the gravitational wave signal into  simulated Advanced LIGO noise
-using the noise power spectral density \textcolor{red}{insert formula} for varying
-SNRs, respectively distances to the source. We estimate the coverage probability of the 95\%
-confidence band by calculating the proportion of times that the true ratio lies outside one
-of the pointwise 95\% confidence intervals.
-These coverage probabilities together for varying SNRs are given in Table
-\textcolor{red}{insert Table} and displayed in the form of boxplots in Figure
-\textcolor{red}{insert Figure}
 
 
 
