@@ -51,8 +51,8 @@ Figure \ref{fig:LMVAR}.
 
 \begin{figure}
  \centering
- \includegraphics[width=0.5\textwidth,height=0.3\textheight]{plots/model}
- \caption{Data from 25 1D simulations {\sc AENUS-ALCAR } and {\sc CoCoNuT}  code, solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands.} \label{fig:LMVAR}
+ \includegraphics[width=0.5\textwidth]{plots/model}
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from 25 1D simulations {\sc AENUS-ALCAR} (red) and {\sc CoCoNuT} (green) code. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering the {\sc AENUS-ALCAR} data points.} \label{fig:LMVAR}
 \end{figure}
 
 To develop the method we considered the gravitational wave signal
@@ -61,9 +61,10 @@ sampled at 16384 Hz but resampled at 4096 Hz.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
 autoregressive estimates of the local spectra for successive time intervals of 
 \textcolor{red}{length 200} with a \textcolor{red}{ 90\%} overlap.
-The dominant emission mode corresponds to the $\mbox{}^2 g_2$-mode and we have
+The dominant emission mode corresponds to the $\mbox{}^2 g_2$-mode. We have
 developed a time-frequency method to track the ridge $m(t)$ in the spectrogram,
-taking into account that it is monotonically increasing as time goes.
+taking into account that it is monotonically increasing as time goes,
+a property of the $\mbox{}^2 g_2$-mode.
 Starting from either the left- or right-most column of the time-frequency matrix
 we identify and trace the sequence of amplitude peaks within a certain frequency
 band given the monotonicity constraint. Appendix \ref{app:gmode} is providing more
@@ -72,7 +73,7 @@ details on the reconstruction of the $g$ mode ridge.
 
 \begin{figure}
  \centering
- \includegraphics[width=0.5\textwidth,height=0.3\textheight]{plots/spectrogram}
+ \includegraphics[width=0.5\textwidth]{plots/spectrogram}
  \caption{Spectrogram of the gravitational wave signal {\tt s20-gw-10kpc} sampled at \unit[4096]{Hz}.
    The spectrogram is obtained using data streach of 200 samples overlapping at 90\%
    with each other.} \label{fig:spectrogram}
@@ -84,22 +85,16 @@ the midpoint $t_i$ of each local time interval of the spectrogram and interpolat
 for values in between the $t_i$. We then use equation (\ref{eq:universal}) to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
 An exemple is given in Figure \ref{fig:ratio} where the red points are the point estimates and
-the grey bands represent 95\% confidence bands. The black points are the true ratio values
+the grey bands represent 95\% confidence bands. The black points are the ratio values
 computed using the mass and radius values obtained from the simulation code. 
 
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth,height=0.3\textheight]{plots/ratio}
- \caption{} \label{fig:ratio}
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ as function of time extracted from the $\mbox{}^2 g_2$-mode of the {\tt s20-gw-10kpc} signal (red points and the 95\% confidence belt in grey) compared to the ratio value derived from the PNS mass and radius given by the simulation code (black points).} \label{fig:ratio}
 \end{figure}
 
 
 In this case, for a GW signal without any noise, the coverage of our 95\% confidence band is 94\%.
 In the next section we explore how accurately we can estimate $r(t)$ when the gravitational wave
 signal is embedded in noise.
-
-
-
-
-
-
