@@ -10,8 +10,8 @@ characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes with the 
 and the radius of the PNS, the shock radius and the total mass inside the shock as
 demonstrated in \cite{Torres:2019}.
 
-Using 25 1D simulations obtained with the {\sc AENUS-ALCAR }code \cite{} and the
-{\sc CoCoNuT} \cite{} code, we parametrize the ratio with a cubic polynomial
+Using 25 spherically symetric (1D) simulations obtained with the {\sc AENUS-ALCAR }code \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics} and the
+{\sc CoCoNuT} \citep{Cerda-Duran__2008__AA__GRMHD-code} code, we parametrize the ratio with a cubic polynomial
 regression with heteroscedastic errors
 %Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polyn
 
@@ -61,7 +61,7 @@ sampled at 16384 Hz but resampled at 4096 Hz.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
 autoregressive estimates of the local spectra for successive time intervals of 
 \textcolor{red}{length 200} with a \textcolor{red}{ 90\%} overlap.
-The dominant emission mode corresponds to the $\mbox{}^2 g_2$-mode. We have
+The dominant emission mode corresponds to the PNS oscillation $\mbox{}^2 g_2$-mode. We have
 developed a time-frequency method to track the ridge $m(t)$ in the spectrogram,
 taking into account that it is monotonically increasing as time goes,
 a property of the $\mbox{}^2 g_2$-mode.
@@ -85,8 +85,8 @@ the midpoint $t_i$ of each local time interval of the spectrogram and interpolat
 for values in between the $t_i$. We then use equation (\ref{eq:universal}) to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
 An exemple is given in Figure \ref{fig:ratio} where the red points are the point estimates and
-the grey bands represent 95\% confidence bands. The black points are the ratio values
-computed using the mass and radius values obtained from the simulation code. 
+the grey bands represent 95\% confidence bands. Ratio values
+computed using the mass and radius values obtained from the simulation code are shown in black.
 
 \begin{figure}
  \centering
@@ -96,5 +96,5 @@ computed using the mass and radius values obtained from the simulation code.
 
 
 In this case, for a GW signal without any noise, the coverage of our 95\% confidence band is 94\%.
-In the next section we explore how accurately we can estimate $r(t)$ when the gravitational wave
+In the next section we investigate the performance of reconstruction of $r(t)$ when the gravitational wave
 signal is embedded in noise.
