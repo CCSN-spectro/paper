@@ -16,6 +16,7 @@ regression with heteroscedastic errors
 %Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polyn
 
 \begin{equation}
+\label{model1}
 r_i=\beta_1 f_i + \beta_2 f_i^2 +\beta_3 f_i^3 + \epsilon_i
 \end{equation}
 where $\epsilon_i$ are assumed to be independent zero-mean Gaussian errors with
@@ -24,26 +25,41 @@ variances is
 \begin{equation}
 \log \sigma_i=\alpha_0+ \alpha_1 f_i + \alpha_2 f_i^2 + \delta_i
 \end{equation}
-with independent and identically zero-mean Gaussian errors $\delta_i$. The R-package LMVAR
+with independent and identically zero-mean Gaussian errors $\delta_i$. The R-package \texttt{lmvar}
 \cite{lmvar:2019} that implements a maximum likelihood approach was used to fit the model.
+
 The best fitting model amongst polynomials of degree 1, 2, and 3  was chosen according to
-the Aikaike information criterion with coefficients given in Table \ref{tab:model},
+the Aikaike information criterion with coefficients given in Table \ref{tab:model}, which is actually the model defined in \eqref{model1}.  The data and fit of the model including 95\% confidence bands are displayed in
+Figure~\ref{fig:LMVAR}.
 
-\begin{equation}\label{eq:universal}
-r_i = \beta_1 f_i + \beta_3 f_i^3 + \epsilon_i
-\end{equation}
+%\begin{equation}\label{eq:universal}
+%r_i = \beta_1 f_i + \beta_3 f_i^3 + \epsilon_i
+%\end{equation}
 
-The best-fitting model achieves a coefficient of determination of $R^2=0.9812$.
-The data and fit of the model including 95\% confidence bands are displayed in
-Figure \ref{fig:LMVAR}.
+%The best-fitting model achieves a coefficient of determination of $R^2=0.9812$.
+%The data and fit of the model including 95\% confidence bands are displayed in
+%Figure~\ref{fig:LMVAR}.
 
 \begin{table}[h]
-  \begin{tabular}{lll}
+%  \begin{tabular}{lll}
+%    \hline
+%    Coefficient & Estimate & standard error \\
+%    \hline
+%    $\beta_1$   & $6.09 \times 10^{-7}$ & $1.75 \times 10^{-8}$ \\
+%    $\beta_3$   & $6.24 \times 10^{-13}$ & $8.79 \times 10^{-15}$ \\
+%    \hline
+%  \end{tabular}
+
+  \begin{tabular}{crr}
     \hline
-    Coefficient & Estimate & standard error \\
+    Coefficient & \multicolumn{1}{c}{Estimate} & Standard error \\
     \hline
-    $\beta_1$   & $6.09 \times 10^{-7}$ & $1.75 \times 10^{-8}$ \\
-    $\beta_3$   & $6.24 \times 10^{-13}$ & $8.79 \times 10^{-15}$ \\
+   $\beta_1$  &  $ 1.00 \times 10^{-06}$ & $2.12 \times 10^{-08}$ \\   
+   $\beta_2$  &  $-8.22 \times 10^{-10}$ & $5.00 \times 10^{-11}$ \\
+   $\beta_3$  &  $ 1.01 \times 10^{-12}$ & $2.70 \times 10^{-14}$ \\
+   $\alpha_0$ &  $-1.02 \times 10^{+01}$ & $6.80 \times 10^{-02}$ \\
+   $\alpha_1$ &  $ 7.24 \times 10^{-04}$ & $1.56 \times 10^{-04}$ \\
+   $\alpha_2$ &  $ 6.23 \times 10^{-07}$ & $8.15 \times 10^{-08}$ \\   
     \hline
   \end{tabular}
 \caption{Estimate and standard error of the coefficients of the best fit model describing the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ as function of the frequency of the $\mbox{}^2g_2$ mode.}\label{tab:model}
