@@ -8,7 +8,7 @@ oscillation mode in the gravitational wave detector data.
 An integral part of this strategy is the universal relations that relate the
 characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes with the mass
 and the radius of the PNS, the shock radius and the total mass inside the shock as
-demonstrated in \cite{Torres:2019}.
+demonstrated in \cite{Torres:2019b}.
 
 Using 25 spherically symetric (1D) simulations obtained with the {\sc AENUS-ALCAR }code \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics} and the
 {\sc CoCoNuT} \citep{Cerda-Duran__2008__AA__GRMHD-code} code, we parametrize the ratio with a cubic polynomial
@@ -72,7 +72,7 @@ Figure~\ref{fig:LMVAR}.
 \end{figure}
 
 To develop the method we considered the gravitational wave signal
-{\tt s20-gw-10kpc} described in Section \ref{sec:simulations}, originally
+{\texttt s20S} described in Section \ref{sec:simulations}, originally
 sampled at 16384 Hz but resampled at 4096 Hz.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
 autoregressive estimates of the local spectra for successive time intervals of 
@@ -90,7 +90,7 @@ details on the reconstruction of the $g$ mode ridge.
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth]{plots/spectrogram}
- \caption{Spectrogram of the gravitational wave signal {\tt s20-gw-10kpc} sampled at \unit[4096]{Hz}.
+ \caption{Spectrogram of the gravitational wave signal {\texttt s20S} sampled at \unit[4096]{Hz}.
    The spectrogram is obtained using data streach of 200 samples overlapping at 90\%
    with each other.} \label{fig:spectrogram}
 \end{figure}
@@ -98,7 +98,7 @@ details on the reconstruction of the $g$ mode ridge.
 
 We collect the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_i)$ for
 the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
-for values in between the $t_i$. We then use equation (\ref{eq:universal}) to obtain
+for values in between the $t_i$. We then use equation (\eqref{model1}) to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
 An exemple is given in Figure \ref{fig:ratio} where the red points are the point estimates and
 the grey bands represent 95\% confidence bands. Ratio values
@@ -107,7 +107,7 @@ computed using the mass and radius values obtained from the simulation code are 
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth,height=0.3\textheight]{plots/ratio}
- \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ as function of time extracted from the $\mbox{}^2 g_2$-mode of the {\tt s20-gw-10kpc} signal (red points and the 95\% confidence belt in grey) compared to the ratio value derived from the PNS mass and radius given by the simulation code (black points).} \label{fig:ratio}
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ as function of time extracted from the $\mbox{}^2 g_2$-mode of the {\texttt s20S} signal (red points and the 95\% confidence belt in grey) compared to the ratio value derived from the PNS mass and radius given by the simulation code (black points).} \label{fig:ratio}
 \end{figure}
 
 
