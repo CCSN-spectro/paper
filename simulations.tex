@@ -1,80 +1,78 @@
 \section{Core collapse supernova simulations}
 \label{sec:simulations}
 
-\textbf{Martin's simulations and code description}\\
-\textbf{1D simlation data to fit the ratio vs frequency model - AA and CoConut outputs}
+% \textbf{Martin's simulations and code description}\\
+% \textbf{1D simlation data to fit the ratio vs frequency model - AA and CoConut outputs}
 
 
-\maob{%%
-  We apply our analysis to spherically symmetric
-  \citep{Torres:2019} and two-dimensional axisymmetric models of
-  stellar core collapse simulated with two codes, CoCoNuT
-  (one-dimensional models) and AENUS-ALCAR
-  \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}
-  (one- and two-dimensional models).  CoCoNuT
-  \citep{Cerda-Duran__2008__AA__GRMHD-code} is a code for general
-  relativistic hydrodynamics coupled to the Fast Multigroup Transport
-  scheme \citep{Mueller_Janka_2015_FMT} providing an approximate
-  description of the emission and transport of neutrinos.  AENUS-ALCAR
-  \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}
-  combines special relativistic (magneto-)hydrodynamics, a modified
-  Newtonian gravitational potential approximating the effects of
-  general relativity \citep{Marek_etal__2006__AA__TOV-potential}, and
-  a spectral two-moment neutrino transport solver
-  \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}.
-  We included the relevant reactions between matter and neutrinos of
-  all flavours, i.e., emission and absorption by nucleons and nuclei,
-  electron-positron pair annihilation, nucleonic bremsstrahlung, and
-  scattering off nucleons, nuclei, and electrons.
-  %%
-}
+The algorithm proposed in the article does not require accurate
+waveforms but relies on the evolution of the frequencies of
+oscillations depending on the PNS mass and radius.  To parametrize
+this dependence, we have considered spherically symmetric
+\citep{Torres:2019a} and two-dimensional axisymmetric models of
+stellar core collapse simulated with two codes, CoCoNuT
+(one-dimensional models) and AENUS-ALCAR
+\citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}
+(one- and two-dimensional models).  CoCoNuT
+\citep{Cerda-Duran__2008__AA__GRMHD-code} is a code for general
+relativistic hydrodynamics coupled to the Fast Multigroup Transport
+scheme \citep{Mueller_Janka_2015_FMT} providing an approximate
+description of the emission and transport of neutrinos.  AENUS-ALCAR
+\citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}
+combines special relativistic (magneto-)hydrodynamics, a modified
+Newtonian gravitational potential approximating the effects of general
+relativity \citep{Marek_etal__2006__AA__TOV-potential}, and a spectral
+two-moment neutrino transport solver
+\citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}.
+We included the relevant reactions between matter and neutrinos of all
+flavours, i.e., emission and absorption by nucleons and nuclei,
+electron-positron pair annihilation, nucleonic bremsstrahlung, and
+scattering off nucleons, nuclei, and electrons.
 
-\maob{%%
-  We use two sets of 25 models in the range of initial stellar masses
-  $M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$ simulated with the two
-  codes.  They were carried out using six equations of state (EOSs).
-  They are complemented by a set of 7 two-dimensional axisymmetric
-  models consisting of stellar core collapse of five stars with
-  zero-age main-sequence masses of
-  $M_{\mathrm{ZAMS}} = 11.2 - 40 \, \Msol$ evolved through the
-  hydrostatic phases by
-  \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}.
-  We performed one simulation of each stellar model using the equation
-  of state of \cite{Lattimer_Swesty__1991__NuclearPhysicsA__LS-EOS}
-  with an incompressibility of $K = 220 \, \mathrm{MeV}$ and added
-  comparison models with the SFHo EOS
-  \cite{Steiner_et_al__2013__apj__Core-collapseSupernovaEquationsofStateBasedonNeutronStarObservations}
-  and the EOS of
-  \cite{Shen_et_al__2011__prc__Newequationofstateforastrophysicalsimulations}
-  for the one with $M_{\mathrm{ZAMS}} = 15 \, \Msol$ (see Table
-  \ref{Tab:2dSimList} for a list of models).
-  %%
-}
+To tune the parameters of the algorithm, we use two sets of 25 models
+in the range of initial stellar masses
+$M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$ simulated with the two codes.
+They were carried out using six equations of state (EOSs).  They are
+complemented by a set of 7 two-dimensional axisymmetric models
+consisting of stellar core collapse of five stars with zero-age
+main-sequence masses of $M_{\mathrm{ZAMS}} = 11.2 - 40 \, \Msol$
+evolved through the hydrostatic phases by
+\cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}.
+We performed one simulation of each stellar model using the equation
+of state of \cite{Lattimer_Swesty__1991__NuclearPhysicsA__LS-EOS} with
+an incompressibility of $K = 220 \, \mathrm{MeV}$ (LS220) and added
+comparison simulations with the SFHo EOS
+\cite{Steiner_et_al__2013__apj__Core-collapseSupernovaEquationsofStateBasedonNeutronStarObservations}
+and the EOS of
+\cite{Shen_et_al__2011__prc__Newequationofstateforastrophysicalsimulations}
+(GShen) for the one with $M_{\mathrm{ZAMS}} = 15 \, \Msol$ (see Table
+\ref{Tab:2dSimList} for a list of models).  To this set of
+simulations, we add the waveform of a two-dimensional model used in
+\cite{Torres:2019a}, denoted \texttt{s20S}.  It corresponds to a star
+with the same initial mass, $M_{\mathrm{ZAMS}} = 20 \, \Msol$, as for
+one of the other 7 axisymmetric simulations, but was taken from a
+newer set of stellar-evolution models
+\cite{Woosley_Heger__2007__physrep__Nucleosynthesisandremnantsinmassivestarsofsolarmetallicity}.
+It was evolved with the SFHo EOS.
 
-\maob{%%
-  We mapped the pre-collapse state of the stars to a spherical
-  coordinate system with $n_r = 400$ zones in radial direction
-  distributed logarithmically with a minimum grid width of $(\Delta
-  r)_{\mathrm{min}} = 400 \, \mathrm{m}$ and an outer radius of
-  $r_{\mathrm{max}} = 8.3 \times 10^{9} \, \mathrm{cm}$ and 
-  $n_{\theta} = 128$ equidistant cells in angular direction.  For the
-  neutrino energies, we used a logarithmic grid with $n_e = 10$
-  bins up to $240 \, \mathrm{MeV}$.
-  %%
-}
+We mapped the pre-collapse state of the stars to a spherical
+coordinate system with $n_r = 400$ zones in radial direction
+distributed logarithmically with a minimum grid width of
+$(\Delta r)_{\mathrm{min}} = 400 \, \mathrm{m}$ and an outer radius of
+$r_{\mathrm{max}} = 8.3 \times 10^{9} \, \mathrm{cm}$ and
+$n_{\theta} = 128$ equidistant cells in angular direction.  For the
+neutrino energies, we used a logarithmic grid with $n_e = 10$ bins up
+to $240 \, \mathrm{MeV}$.
 
-\maob{%%
-  All spherical and most axisymmetric models fail to achieve shock
-  revival during the time of our simulations.  Only the two stars with
-  the highest masses, \texttt{s25} and \texttt{s40}, develop
-  relatively late explosions in axisymmetry.  Consequently, mass
-  accretion onto the PNSs proceeds at high rates for a long time in
-  all cases and causes them to oscillate with their characteristic
-  frequencies.  The final masses of the PNSs are in the range of
-  $M_{\mathrm{PNS}} = 1.47 - 2.33 \, \Msol$, i.e., insufficient for
-  producing a black hole.
-  %%
-}
+All spherical and most axisymmetric models fail to achieve shock
+revival during the time of our simulations.  Only the two stars with
+the highest masses, \texttt{s25} and \texttt{s40}, develop relatively
+late explosions in axisymmetry.  Consequently, mass accretion onto the
+PNSs proceeds at high rates for a long time in all cases and causes
+them to oscillate with their characteristic frequencies.  The final
+masses of the PNSs are in the range of
+$M_{\mathrm{PNS}} = 1.47 - 2.33 \, \Msol$, i.e., insufficient for
+producing a black hole.
 
 \begin{table}
   \centering
@@ -93,6 +91,8 @@
     \texttt{s15G} & 15.0 & GShen & 0.97 & $\times$ &  1.86
     \\ 
     \texttt{s20} & 20.0 & LS220 & 1.53 & $\times$ & 1.75
+    \\ 
+    \texttt{s20S} & 20.0 & SFHo & 0.87 & $\times$ & 2.05
     \\ 
     \texttt{s25} & 25.0 & LS220 & 1.60 & $0.91$ &  2.33
     \\ 
