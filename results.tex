@@ -21,7 +21,7 @@ Figure \ref{fig:s20results} is showing the fraction of the ratio {$r_i^0$} value
 within the 95\% confidence interval of {$r_i$}. This quantity, $coverage$, is taking maximal values
 when the source is located within few kpc and then decreases with the distance.
 
-To better quantity how well we reconstruct the ratio, we have also considered $\Delta$ the mean
+To better quantify how well we reconstruct the ratio, we have also considered $\Delta$ the mean
 over the track of the relative error of $r_i$. 
 
 \begin{equation}
@@ -33,11 +33,18 @@ on Figure \ref{fig:s20results}. For a source located up to $\sim$\unit[10]{kpc} 
 remains smaller than 20\%. At small distance $\Delta$ is small but not null. This reflects the
 approximation of the model used for $r$.
 It is nevertheless remarkable that one can reconstruct the ratio time series with a good
-precision at distance up to $\sim$ 10 kpc for this particular waveform. We have tested
-that the method does not depend on features of {\texttt s20S} using 7 other waveforms
+precision at distance up to $\sim$ 10 kpc for this particular waveform, with $coverage$ value
+larger than 80\%.
+We have tested that the method does not depend on features of {\texttt s20S} using 7 other waveforms
 described in section \ref{sec:simulations} covering a large range of progenitor masses.
-Figure \ref{fig:aLIGOall} shows that apart {\tt s11.2--LS220}, the ratio is well
-reconstructed for all waveforms up to $\sim$ 10kpc. 
+Figure \ref{fig:aLIGO_cov_allwvf} shows that apart {\tt s11.2--LS220}, the ratio is well
+reconstructed for all waveforms up to $\sim$ 10kpc. On this figure we also show the $coverage$
+value in case of absence of signal. The median value is significantly different from 0 because
+the g-mode reconstruction algorithm is looking for a continuously frequency increasing track
+in the spectrogram, starting between 0 and 200 Hz. In Table \ref{tab:} we are reporting the
+distance at which $coverage$ median is lower than 80\%. 
+
+
 
 \begin{figure}
   \centering
@@ -58,8 +65,14 @@ reconstructed for all waveforms up to $\sim$ 10kpc.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{plots/aLIGO_allwvfs}
- \caption{Median of $coverage$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. } \label{fig:aLIGOall}
+  \includegraphics[width=0.5\textwidth]{plots/aLIGO_cov_allwvfs}
+ \caption{Median of $coverage$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. The ``no signal'' line and band show the median and first and third quartile of $coverage$ in absence of any signal.} \label{fig:aLIGO_cov_allwvf}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/aLIGO_prec_allwvfs}
+ \caption{Median of $Delta$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. The ``no signal'' line and band show the median and first and third quartile of $Delta$ in absence of any signal.} \label{fig:aLIGO_prec_allwvf}
 \end{figure}
 
 
@@ -71,14 +84,20 @@ reconstructed for all waveforms up to $\sim$ 10kpc.
     Simulation & \texttt{s11} & \texttt{s15} & \texttt{s15S} & \texttt{s15G} & \texttt{s20} & \texttt{s20S} & \texttt{s25}  & \texttt{s40}
     \\   
     \hline
-    aLIGO      & 19.5         & 55.4         & 59.0          &   60.0        & 34.3         &   35.8          & 116.5         & 98.5
+    aLIGO char. distance & 7     &            &                &               &   15.6           &    11.3   &  8.9             &  11.5
     \\ 
     \hline
-    CE2
+    SNR in aLIGO         & 19.5 & 55.4        & 59.0          &   60.0        & 34.3         &   35.8          & 116.5         & 98.5
     \\
     \hline
-    ET-B
-    \\ 
+    \hline
+    CE2  max. distance  &      &            &                &               &              &                 &               & 
+    \\
+    \hline
+    SNR in CE2      &      &            &                &               &              &                 &               &
+    \\
+    \hline
+    \hline
   \end{tabular}
   \caption{%%
     Matched filter signal-to-noise ratio (SNR) of the simulated waveforms for
@@ -86,5 +105,11 @@ reconstructed for all waveforms up to $\sim$ 10kpc.
     at 10 kpc and is optimally oriented with respect to the detector.
     %%
   }
-  \label{Tab:SNR}
+  \label{Tab:results}
 \end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/s20--SFHo_all3G}
+  \caption{Median of $coverage$ for s20.0--SFHo CCSN waveform embedded in 3G detectors noise and located at different distance from the Earth. } \label{fig:s20--SFHo_all3G}
+\end{figure}
