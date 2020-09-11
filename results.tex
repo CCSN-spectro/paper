@@ -42,7 +42,7 @@ Figure \ref{fig:aLIGO_cov_allwvf} shows that apart {\tt s11.2--LS220}, the ratio
 reconstructed for all waveforms up to $\sim$ 10kpc. On this figure we also show the $coverage$
 value in case of absence of signal. The median value is significantly different from 0 because
 the g-mode reconstruction algorithm is looking for a continuously frequency increasing track
-in the spectrogram, starting between 0 and 200 Hz. In Table \ref{tab:} we are reporting the
+in the spectrogram, starting between 0 and 200 Hz. In Table \ref{tab:results} we are reporting the
 distance at which $coverage$ median is lower than 80\%. 
 
 
@@ -66,43 +66,31 @@ distance at which $coverage$ median is lower than 80\%.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{plots/aLIGO_cov_allwvfs}
+  \includegraphics[width=0.5\textwidth]{plots/aLIGO_coverage_allwvfs}
  \caption{Median of $coverage$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. The ``no signal'' line and band show the median and first and third quartile of $coverage$ in absence of any signal.} \label{fig:aLIGO_cov_allwvf}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{plots/aLIGO_prec_allwvfs}
+  \includegraphics[width=0.5\textwidth]{plots/aLIGO_delta_allwvfs}
  \caption{Median of $Delta$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. The ``no signal'' line and band show the median and first and third quartile of $Delta$ in absence of any signal.} \label{fig:aLIGO_prec_allwvf}
 \end{figure}
 
 
 \begin{table}
   \centering
-  \begin{tabular}{c|cccccccc}
-    \hline
+  \begin{tabular}{c|c|cccccccc}
     
-    Simulation & \texttt{s11} & \texttt{s15} & \texttt{s15S} & \texttt{s15G} & \texttt{s20} & \texttt{s20S} & \texttt{s25}  & \texttt{s40}
-    \\   
-    \hline
-    aLIGO char. & 7  &      26      &    25         &      21       &   16         &    11         &  9           &  12
-    \\
-    distance (kpc) & & & & & & & &
-    \\ 
-    \hline
-    SNR in aLIGO         & 19.5 &    55.4    &    59.0       &      60.0     &   34.3       &    35.8          & 116.5         & 98.5
-    \\
-    \hline
-    \hline
-    CE2  char.  &      &            &                &               &              &                 &               & 
-    \\
-    distance (kpc) & & & & & & & &
-    \\
-    \hline
-    SNR in CE2      &      &            &                &               &              &                 &               &
-    \\
-    \hline
-    \hline
+    
+\multicolumn{2}{c|}{}  & \texttt{s11} & \texttt{s15} & \texttt{s15S} & \texttt{s15G} & \texttt{s20} & \texttt{s20S} & \texttt{s25}  & \texttt{s40}\\   
+
+\hline
+\multirow{2}{*}{aLIGO} & $d_{max}$ (kpc) & 7.3  & 26.3 & 24.8 & 22.3 & 16.3 & 10.8 & 7.8  & 14.8\\
+\cline{2-10}
+                       & SNR            & 13.0 & 37.0 & 38.7 & 39.2 & 22.9 & 23.3 & 75.6 & 63.6\\
+\hline
+\hline
+
   \end{tabular}
   \caption{%%
     Matched filter signal-to-noise ratio (SNR) of the simulated waveforms for
@@ -110,7 +98,7 @@ distance at which $coverage$ median is lower than 80\%.
     at 10 kpc and is optimally oriented with respect to the detector.
     %%
   }
-  \label{Tab:results}
+  \label{tab:results}
 \end{table}
 
 \begin{figure}
