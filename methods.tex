@@ -16,7 +16,7 @@ regression with heteroscedastic errors
 %Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polyn
 
 \begin{equation}
-\label{model1}
+\label{eq:model1}
 r_i=\beta_1 f_i + \beta_2 f_i^2 +\beta_3 f_i^3 + \epsilon_i
 \end{equation}
 where $\epsilon_i$ are assumed to be independent zero-mean Gaussian errors with
@@ -29,7 +29,7 @@ with independent and identically zero-mean Gaussian errors $\delta_i$. The R-pac
 \cite{lmvar:2019} that implements a maximum likelihood approach was used to fit the model.
 
 The best fitting model amongst polynomials of degree 1, 2, and 3  was chosen according to
-the Aikaike information criterion with coefficients given in Table \ref{tab:model}, which is actually the model defined in \eqref{model1}.  The data and fit of the model including 95\% confidence bands are displayed in
+the Aikaike information criterion with coefficients given in Table \ref{tab:model}, which is actually the model defined in \eqref{eq:model1}.  The data and fit of the model including 95\% confidence bands are displayed in
 Figure~\ref{fig:LMVAR}.
 
 %\begin{equation}\label{eq:universal}
@@ -98,7 +98,7 @@ details on the reconstruction of the $g$ mode ridge.
 
 We collect the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_i)$ for
 the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
-for values in between the $t_i$. We then use equation \eqref{model1} to obtain
+for values in between the $t_i$. We then use equation \eqref{eq:model1} to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
 An exemple is given in Figure \ref{fig:ratio} where the red points are the point estimates and
 the grey bands represent 95\% confidence bands. Ratio values
