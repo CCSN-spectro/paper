@@ -6,8 +6,8 @@
 % \textbf{1D simlation data to fit the ratio vs frequency model - AA and CoConut outputs}
 
 
-\pcd{Unless other methods used GW astronomy, the} algorithm proposed in \pcd{this work} does not require accurate
-waveforms \pcd{in order to infer the properties of the PNS.} \pcd{Instead, it relies on the evolution of the frequency of
+{Unless other methods used GW astronomy, the} algorithm proposed in {this work} does not require accurate
+waveforms {in order to infer the properties of the PNS.} {Instead, it relies on the evolution of the frequency of
 oscillation of some particular modes, as seen in the GW spectrum. The frequency of these modes depends, in a universal way, 
 on the surface gravity of the PNS ($r=M_{\rm PNS}/R_{\rm PNS}^2$), in the sense that if at a given time we observe GW emission
 at a certain frequency $f$ we can determine univocally the value of the surface gravity, within a certain error, regardless of the details
@@ -15,16 +15,16 @@ of the numerical simulation. In this work we use two sets of simulations: i) The
 to build the universal relation (model), $r(f)$, linking the ratio $r$ with the observed frequency $f$, and ii) the {\it test set}, composed by 2D simulations, 
 for which we know both the GW signal and the evolution of the ratio, $r (t)$, and that is used to test performance of the algorithm.}
 
-\pcd{We have used two different numerical codes in our numerical simulations.} 
+{We have used two different numerical codes in our numerical simulations.} 
 %CoCoNuT
 %(one-dimensional models) and AENUS-ALCAR
 %\citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}
-%(one- and two-dimensional models).  
+%(one- and two-dimensional models). 
 CoCoNuT
 \citep{Dimmelmeier:2002,Dimmelmeier:2005} is a code for general
 relativistic hydrodynamics coupled to the Fast Multigroup Transport
 scheme \citep{Mueller_Janka_2015_FMT} providing an approximate
-description of the emission and transport of neutrinos.  AENUS-ALCAR
+description of the emission and transport of neutrinos. AENUS-ALCAR
 \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}
 combines special relativistic (magneto-)hydrodynamics, a modified
 Newtonian gravitational potential approximating the effects of general
@@ -36,7 +36,7 @@ flavours, i.e., emission and absorption by nucleons and nuclei,
 electron-positron pair annihilation, nucleonic bremsstrahlung, and
 scattering off nucleons, nuclei, and electrons.
 
-\pcd{For the {\it model set}, we use the $25$ spherically symmetric (1D) simulations of \citep{Torres:2019a}
+{For the {\it model set}, we use the $25$ spherically symmetric (1D) simulations of \citep{Torres:2019a}
 including progenitors with zero-age main sequence (ZAMS) masses in the range 
 $M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using the
  two numerical codes and six different equations of state. Details can be found in
@@ -45,42 +45,42 @@ $M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using the
  simulations, so is easier to accumulate the statistics necessary to build a good model for $r(f)$.} 
  
  \begin{table}
-  \centering
-  \begin{tabular}{c|ccc|ccc}
-    \hline
-    Model & $M_\mathrm{ZAMS} $  & progenitor& EOS & $t_{\mathrm{f}}$& $t_{\rm explosion}$ & $M_{\mathrm{PNS, f}}$\\
-    name&  $[\Msol]$ & model & &  $[\mathrm{s}]$& & $[\Msol]$ 
+ \centering
+ \begin{tabular}{c|ccc|ccc}
+  \hline
+  Model & $M_\mathrm{ZAMS} $ & progenitor& EOS & $t_{\mathrm{f}}$& $t_{\rm explosion}$ & $M_{\mathrm{PNS, f}}$\\
+  name& $[\Msol]$ & model & & $[\mathrm{s}]$& & $[\Msol]$ 
+  \\ 
+  \hline
+  \texttt{s11} & 11.2 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.86 & $\times$ & 1.47 
+  \\ 
+  \texttt{s15} & 15.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.66 & $\times$ & 2.00 
     \\ 
-    \hline
-    \texttt{s11} & 11.2 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.86 & $\times$ &  1.47 
+  \texttt{s15S} & 15.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& SFHo & 1.75 & $\times$ & 2.02 
     \\ 
-    \texttt{s15} & 15.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.66 & $\times$ &  2.00 
-        \\ 
-    \texttt{s15S} & 15.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& SFHo & 1.75 & $\times$ &  2.02 
-        \\ 
-    \texttt{s15G} & 15.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& GShen & 0.97 & $\times$ &  1.86
-         \\ 
-    \texttt{s20} & 20.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.53 & $\times$ & 1.75 
-        \\ 
-    \texttt{s20S} & 20.0 & \cite{Woosley_Heger__2007__physrep__Nucleosynthesisandremnantsinmassivestarsofsolarmetallicity} & SFHo & 0.87 & $\times$ & 2.05 
+  \texttt{s15G} & 15.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& GShen & 0.97 & $\times$ & 1.86
+     \\ 
+  \texttt{s20} & 20.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.53 & $\times$ & 1.75 
     \\ 
-    \texttt{s25} & 25.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.60 & $0.91$ &  2.33 
-        \\ 
-    \texttt{s40} & 40.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.70 & $1.52$ &  2.23 
-        \\ \hline
-  \end{tabular}
-  \caption{%%
-    List of axisymmetric simulations \pcd{used for the {\it test set}}.  
-    \pcd{The last three columns show, the post-bounce time at the end of the
-    simulation, the one at the onset of the explosion (non exploding models marked
-    with $\times$), and the PNS mass at the end of the simulation.}
-    %%
-  }
-  \label{Tab:2dSimList}
+  \texttt{s20S} & 20.0 & \cite{Woosley_Heger__2007__physrep__Nucleosynthesisandremnantsinmassivestarsofsolarmetallicity} & SFHo & 0.87 & $\times$ & 2.05 
+  \\ 
+  \texttt{s25} & 25.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.60 & $0.91$ & 2.33 
+    \\ 
+  \texttt{s40} & 40.0 & \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}& LS220 & 1.70 & $1.52$ & 2.23 
+    \\ \hline
+ \end{tabular}
+ \caption{%%
+  List of axisymmetric simulations {used for the {\it test set}}. 
+  {The last three columns show, the post-bounce time at the end of the
+  simulation, the one at the onset of the explosion (non exploding models marked
+  with $\times$), and the PNS mass at the end of the simulation.}
+  %%
+ }
+ \label{Tab:2dSimList}
 \end{table}
 
  
-\pcd{For the {\it test set}, we use $8$ axisymmetric (2D) simulations using the AENUS-ALCAR code
+{For the {\it test set}, we use $8$ axisymmetric (2D) simulations using the AENUS-ALCAR code
 (see Table~\ref{Tab:2dSimList} for a list of models).
 $7$ of these simulations use a selection of progenitors with masses in the range} $M_{\mathrm{ZAMS}} = 11.2 - 40 \, \Msol$
  evolved through the hydrostatic phases by
@@ -92,30 +92,30 @@ comparison simulations with the SFHo EOS
 \cite{Steiner_et_al__2013__apj__Core-collapseSupernovaEquationsofStateBasedonNeutronStarObservations}
 and the EOS of
 \cite{Shen_et_al__2011__prc__Newequationofstateforastrophysicalsimulations}
-(GShen) for the \pcd{progenitor} with $M_{\mathrm{ZAMS}} = 15 \, \Msol$.  To this set of
+(GShen) for the {progenitor} with $M_{\mathrm{ZAMS}} = 15 \, \Msol$. To this set of
 simulations, we add the waveform of a two-dimensional model used in
-\cite{Torres:2019a}, denoted \texttt{s20S}.  It corresponds to a star
+\cite{Torres:2019a}, denoted \texttt{s20S}. It corresponds to a star
 with the same initial mass, $M_{\mathrm{ZAMS}} = 20 \, \Msol$, as for
 one of the other 7 axisymmetric simulations, but was taken from a
 newer set of stellar-evolution models
 \cite{Woosley_Heger__2007__physrep__Nucleosynthesisandremnantsinmassivestarsofsolarmetallicity}.
 It was evolved with the SFHo EOS.
 
-\pcd{For all the simulations,} we mapped the pre-collapse state of the stars to a spherical
+{For all the simulations,} we mapped the pre-collapse state of the stars to a spherical
 coordinate system with $n_r = 400$ zones in radial direction
 distributed logarithmically with a minimum grid width of
 $(\Delta r)_{\mathrm{min}} = 400 \, \mathrm{m}$ and an outer radius of
 $r_{\mathrm{max}} = 8.3 \times 10^{9} \, \mathrm{cm}$ and
-$n_{\theta} = 128$ equidistant cells in angular direction.  For the
+$n_{\theta} = 128$ equidistant cells in angular direction. For the
 neutrino energies, we used a logarithmic grid with $n_e = 10$ bins up
 to $240 \, \mathrm{MeV}$.
 
 All spherical and most axisymmetric models fail to achieve shock
-revival during the time of our simulations.  Only the two stars with
+revival during the time of our simulations. Only the two stars with
 the highest masses, \texttt{s25} and \texttt{s40}, develop relatively
-late explosions in axisymmetry.  Consequently, mass accretion onto the
+late explosions in axisymmetry. Consequently, mass accretion onto the
 PNSs proceeds at high rates for a long time in all cases and causes
-them to oscillate with their characteristic frequencies.  The final
+them to oscillate with their characteristic frequencies. The final
 masses of the PNSs are in the range of
 $M_{\mathrm{PNS}} = 1.47 - 2.33 \, \Msol$, i.e., insufficient for
 producing a black hole.
