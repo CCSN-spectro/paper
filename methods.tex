@@ -1,3 +1,4 @@
+% !TEX root = ccsn.tex
 \section{Methods description}
 \label{methods}
 
@@ -10,8 +11,13 @@ characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes with the 
 and the radius of the PNS, the shock radius and the total mass inside the shock as
 demonstrated in \cite{Torres:2019b}.
 
-Using 25 spherically symetric (1D) simulations obtained with the {\sc AENUS-ALCAR }code \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics} and the
-{\sc CoCoNuT} \citep{Cerda-Duran__2008__AA__GRMHD-code} code, we parametrize the ratio with a cubic polynomial
+\pcd{To build the model of the ratio $r$ as a function of the frequency $f$ we use the 
+spherically symetric (1D) simulations of the {\it model set}. Figure~\ref{fig:LMVAR}
+shows the data for the $25$ numerical simulations. As identified by \cite{Torres:2019b}, the only systematic
+deviation from a single universal relation is the numerical code used in the simulations. 
+To avoid any systematic effect, we only use to build our model the $18$ simulations performed with the ALCAR-AENUS
+code, which is the same code that was used in our test set. The consequences of this choice are discussed in the
+conclusions. Using this data, we} parametrize the ratio with a cubic polynomial
 regression with heteroscedastic errors
 %Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polyn
 
@@ -68,19 +74,22 @@ Figure~\ref{fig:LMVAR}.
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth]{plots/model}
- \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from 25 1D simulations {\sc AENUS-ALCAR} (red) and {\sc CoCoNuT} (green) code. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering the {\sc AENUS-ALCAR} data points.} \label{fig:LMVAR}
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from 25 1D simulations {\sc AENUS-ALCAR} (red) and {\sc CoCoNuT} (green) code. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering \pcd{only} the  {\sc AENUS-ALCAR} data points \pcd{($18$ simulations)}.} \label{fig:LMVAR}
 \end{figure}
 
-To develop the method we considered the gravitational wave signal
-{\texttt s20S} described in Section \ref{sec:simulations}, originally
+\pcd{We use this model to infer the properties of the simulations in the 
+{\it test set} described in in Section \ref{sec:simulations}.}
+To develop \pcd{and describe} the method we \pcd{\sout{considered} focus on} the gravitational wave signal
+\pcd{of} {\texttt s20S}, originally
 sampled at 16384 Hz but resampled at 4096 Hz.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
-autoregressive estimates of the local spectra for successive time intervals of 
+autoregressive estimates \pcd{[CITATION?]}of the local spectra for successive time intervals of 
 \textcolor{red}{length 200} with a \textcolor{red}{ 90\%} overlap.
 The dominant emission mode corresponds to the PNS oscillation $\mbox{}^2 g_2$-mode. We have
 developed a time-frequency method to track the ridge $m(t)$ in the spectrogram,
-taking into account that it is monotonically increasing as time goes,
-a property of the $\mbox{}^2 g_2$-mode.
+taking into account that it is monotonically increasing as time goes. 
+\pcd{This is a property of the $\mbox{}^2 g_2$-mode, the frequency of which  
+increases as the object becomes more massive and compact}.
 Starting from either the left- or right-most column of the time-frequency matrix
 we identify and trace the sequence of amplitude peaks within a certain frequency
 band given the monotonicity constraint. Appendix \ref{app:gmode} is providing more
@@ -98,11 +107,12 @@ details on the reconstruction of the $g$ mode ridge.
 
 We collect the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_i)$ for
 the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
-for values in between the $t_i$. We then use equation \eqref{eq:model1} to obtain
+for values in between the $t_i$. We then use \pcd{our model given by Eq.~}
+\eqref{eq:model1} to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
 An exemple is given in Figure \ref{fig:ratio} where the red points are the point estimates and
 the grey bands represent 95\% confidence bands. Ratio values
-computed using the mass and radius values obtained from the simulation code are shown in black.
+computed using the mass and radius values obtained from the simulation code \pcd{(true values)} are shown in black.
 
 \begin{figure}
  \centering
@@ -111,6 +121,6 @@ computed using the mass and radius values obtained from the simulation code are 
 \end{figure}
 
 
-In this case, for a GW signal without any noise, the coverage of our 95\% confidence band is 94\%.
-In the next section we investigate the performance of reconstruction of $r(t)$ when the gravitational wave
+In this case, for a GW signal without any noise, the coverage of our 95\% confidence band is 94\% \pcd{of the true values}.
+In the next section we investigate the performance of \pcd{the} reconstruction of $r(t)$ when the gravitational wave
 signal is embedded in noise.

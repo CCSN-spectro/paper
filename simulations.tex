@@ -42,7 +42,9 @@ $M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using the
  two numerical codes and six different equations of state. Details can be found in
  \citep{Torres:2019a}. The reason to use one dimensional simulations for the model set
  is that the computational cost of those is significantly smaller than the cost of multidimensional
- simulations, so is easier to accumulate the statistics necessary to build a good model for $r(f)$.} 
+ simulations, so is easier to accumulate the statistics necessary to build a good model for $r(f)$.}
+ \pcd{For each time of each simulation we compute the ratio $r$ and the frequency of the $^2g_2$ mode by means of the linear analysis
+ described in \cite{Torres:2018,Torres:2019a,Torres:2019b}. } 
  
  \begin{table}
  \centering
@@ -82,8 +84,6 @@ $M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using the
  
 {For the {\it test set}, we use $8$ axisymmetric (2D) simulations using the AENUS-ALCAR code
 (see Table~\ref{Tab:2dSimList} for a list of models).
-\pcd{Unlike the model set, the simulations in the test set cannot be 1D becase we need to extract the gravitational wave signal, which is
-a multi-dimensional effect.. }
 $7$ of these simulations use a selection of progenitors with masses in the range} $M_{\mathrm{ZAMS}} = 11.2 - 40 \, \Msol$
  evolved through the hydrostatic phases by
 \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}.
@@ -112,6 +112,10 @@ $r_{\mathrm{max}} = 8.3 \times 10^{9} \, \mathrm{cm}$ and
 $n_{\theta} = 128$ equidistant cells in angular direction. For the
 neutrino energies, we used a logarithmic grid with $n_e = 10$ bins up
 to $240 \, \mathrm{MeV}$.
+\pcd{Unlike the model set, the simulations in the test set cannot be 1D becase we need to 
+extract the gravitational wave signal, which is a multi-dimensional effect. For each simulation
+we extract the gravitational wave signal, $h_+(t)$,  by means of the quadrupole formula and compute the 
+time evolution of the surface gravity, $r(t)$.}
 
 All spherical and most axisymmetric models fail to achieve shock
 revival during the time of our simulations. Only the two stars with
