@@ -89,17 +89,43 @@ distance at which $coverage$ median is lower than 80\%.
 \multicolumn{2}{c|}{}  & \texttt{s11} & \texttt{s15} & \texttt{s15S} & \texttt{s15G} & \texttt{s20} & \texttt{s20S} & \texttt{s25}  & \texttt{s40}\\   
 
 \hline
-\multirow{2}{*}{aLIGO} & $d_{max}$ (kpc) & 7.3  & 26.3 & 24.8 & 22.3 & 16.3 & 10.8 & 7.8  & 14.8\\
+\multirow{2}{*}{aLIGO} & $d_{max}$ & 7  & 26 & 24 & 22 & 16 & 10 & 13 & 28\\
 \cline{2-10}
-                       & SNR            & 13.0 & 37.0 & 38.7 & 39.2 & 22.9 & 23.3 & 75.6 & 63.6\\
+                       & SNR      & 14 & 46 & 33 & 35 & 27 & 21 & 96 & 80\\
 \hline
 \hline
+\multirow{2}{*}{CE1} & $d_{max}$ &  75  & 285 & 279 & 230 & 179 & 111 & 164  & 349\\
+\cline{2-10}
+                       & SNR    &  149 & 490 & 352 & 366 & 282 & 218 & 1006 & 822\\
+
+\hline
+\multirow{2}{*}{CE2} & $d_{max}$ & 147  & -- & -- & -- & -- & 207 & --  & --\\
+\cline{2-10}
+                       & SNR    & 256 & 843 & 608 & 635 & 487 & 382 & 1751 & 1430\\
+
+\hline
+\multirow{2}{*}{ET\_B} & $d_{max}$ & 75  & 278 & 274 & 244 & 159 & 107 & 79   & 62\\
+\cline{2-10}
+                       & SNR      & 138 & 473 & 356 & 379 & 381 & 260 & 1046 & 865\\
+
+\hline
+\multirow{2}{*}{ET\_C} & $d_{max}$ & 71  & 271 & 239 & 222 & 154 & 119 & 104  & 165\\
+\cline{2-10}
+                       & SNR      & 126 & 432 & 320 & 338 & 252 & 213 & 945 & 783\\
+
+\hline
+\multirow{2}{*}{ET\_D} & $d_{max}$ & 79  & 306 & 264 & 252 & 179 & 131 & 134  & 349\\
+\cline{2-10}
+                       & SNR      & 140 & 477 & 352 & 371 & 277 & 227 & 1034 & 859 \\
 
   \end{tabular}
   \caption{%%
+    Maximal distance $d_{max}$ at which the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ is reconstructed
+    with good accuracy for a source optimally oreinted with respect to the GW detectors
+    considered in this study.
     Matched filter signal-to-noise ratio (SNR) of the simulated waveforms for
-    the different GW detectors considered in this study. The source is located
-    at 10 kpc and is optimally oriented with respect to the detector.
+    the different GW detectors. The source is located at 10 kpc and is optimally oriented
+    with respect to the detector.
     %%
   }
   \label{tab:results}
