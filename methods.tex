@@ -3,21 +3,21 @@
 \label{methods}
 
 In this section, we outline a strategy for estimating the time evolution of the
-ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ of the mass of the PNS and its squared radius
-(in units of solar mass and km) from the observation of the $\mbox{}^2g_2$
-oscillation mode in the gravitational wave detector data.
+ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ (in units of solar mass and km) from the observation of the $\mbox{}^2g_2$
+oscillation mode in the GW detector data.
 An integral part of this strategy is the universal relations that relate the
 characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes with the mass
 and the radius of the PNS, the shock radius and the total mass inside the shock as
 demonstrated in \cite{Torres:2019b}.
 
-\pcd{To build the model of the ratio $r$ as a function of the frequency $f$ we use the 
+To build the model of the ratio $r$ as a function of the frequency $f$ we use the 
 spherically symetric (1D) simulations of the {\it model set}. Figure~\ref{fig:LMVAR}
 shows the data for the $25$ numerical simulations. As identified by \cite{Torres:2019b}, the only systematic
 deviation from a single universal relation is the numerical code used in the simulations. 
-To avoid any systematic effect, we only use the $18$ simulations performed with the ALCAR-AENUS
-code, which is the same code that was used in our test set. The consequences of this choice are discussed in the
-conclusions. Using this data, we} parametrize the ratio with a cubic polynomial
+To avoid any systematic effect, we only use the $18$ simulations performed with the {\sc AENUS-ALCAR}
+code, which is the same code that was used in our test set.
+%The consequences of this choice are discussed in the conclusions.
+Using this data, we parametrize the discretized ratio $r_i$ with a cubic polynomial
 regression with heteroscedastic errors
 %Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polyn
 
@@ -74,21 +74,21 @@ Figure~\ref{fig:LMVAR}.
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth]{plots/model}
- \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from 25 1D simulations {\sc AENUS-ALCAR} (red) and {\sc CoCoNuT} (green) code. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering \pcd{only} the  {\sc AENUS-ALCAR} data points \pcd{($18$ simulations)}.} \label{fig:LMVAR}
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from 25 1D simulations {\sc AENUS-ALCAR} (red) and {\sc CoCoNuT} (green) code. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering \pcd{only} the  {\sc AENUS-ALCAR} data points \pcd{($18$ simulations)}. \mab{To be redone in python}} \label{fig:LMVAR}
 \end{figure}
 
-\pcd{We use this model to infer the properties of the simulations in the 
+{We use this model to infer the properties of the simulations in the 
 {\it test set} described in in Section \ref{sec:simulations}.}
-To describe the method we focus on the gravitational wave signal
+To describe the method we focus on the GW signal
 of {\texttt s20S}, originally
 sampled at 16384 Hz but resampled at 4096 Hz.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
-autoregressive estimates \pcd{[CITATION?]}of the local spectra for successive time intervals of 
+autoregressive estimates \pcd{[add ref?]}of the local spectra for successive time intervals of 
 \textcolor{red}{length 200} with a \textcolor{red}{ 90\%} overlap.
 The dominant emission mode corresponds to the PNS oscillation $\mbox{}^2 g_2$-mode. We have
-developed a time-frequency method to track the ridge $m(t)$ in the spectrogram,
+developed a time-frequency method to track the ridge $m(t) $in the spectrogram,
 taking into account that it is monotonically increasing as time goes. 
-\pcd{This is a property of the $\mbox{}^2 g_2$-mode, the frequency of which  
+{This is a property of the $\mbox{}^2 g_2$-mode, the frequency of which  
 increases as the object becomes more massive and compact}.
 Starting from either the left- or right-most column of the time-frequency matrix
 we identify and trace the sequence of amplitude peaks within a certain frequency
@@ -99,20 +99,23 @@ details on the reconstruction of the $g$ mode ridge.
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth,height=0.3\textheight]{plots/spectrogram}
- \caption{Spectrogram of the gravitational wave signal {\texttt s20S} sampled at \unit[4096]{Hz}.
+ \caption{Spectrogram of the GW signal {\texttt s20S} sampled at \unit[4096]{Hz}.
    The spectrogram is obtained using data streach of 200 samples overlapping at 90\%
-   with each other.} \label{fig:spectrogram}
+   with each other. \mab{To be redone in python}} \label{fig:spectrogram}
 \end{figure}
-
 
 We collect the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_i)$ for
 the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
-for values in between the $t_i$. We then use \pcd{our model given by Eq.~}
-\eqref{eq:model1} to obtain
+for values in between the $t_i$. We then use our model given by Eq.~\eqref{eq:model1} to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
-An exemple is given in Figure \ref{fig:ratio} where the red points are the point estimates and
+An example is given in Figure \ref{fig:ratio} where the red points are the point estimates and
 the grey bands represent 95\% confidence bands. Ratio values
-computed using the mass and radius values obtained from the simulation code \pcd{(true values)} are shown in black.
+computed using the mass and radius values obtained from the simulation code \pcd{(true values)}
+are shown in black.
+In this example of a GW signal without noise the coverage of our 95\% confidence band is 100\%
+of the true values.
+In the next section we investigate the performance of the reconstruction of $r(t)$ when the GW
+signal is embedded in noise.
 
 \begin{figure}
  \centering
@@ -121,6 +124,3 @@ computed using the mass and radius values obtained from the simulation code \pcd
 \end{figure}
 
 
-In this case, for a GW signal without any noise, the coverage of our 95\% confidence band is 100\% of the true values.
-In the next section we investigate the performance of \pcd{the} reconstruction of $r(t)$ when the gravitational wave
-signal is embedded in noise.

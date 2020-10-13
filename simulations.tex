@@ -6,14 +6,18 @@
 % \textbf{1D simlation data to fit the ratio vs frequency model - AA and CoConut outputs}
 
 
-{Unless other methods used GW astronomy, the} algorithm proposed in {this work} does not require accurate
-waveforms {in order to infer the properties of the PNS.} {Instead, it relies on the evolution of the frequency of
-oscillation of some particular modes, as seen in the GW spectrum. The frequency of these modes depends, in a universal way, 
-on the surface gravity of the PNS ($r=M_{\rm PNS}/R_{\rm PNS}^2$), in the sense that if at a given time we observe GW emission
-at a certain frequency $f$ we can determine univocally the value of the surface gravity, within a certain error, regardless of the details
-of the numerical simulation. In this work we use two sets of simulations: i) The {\it model set}, composed by 1D simulations, which is used 
-to build the universal relation (model), $r(f)$, linking the ratio $r$ with the observed frequency $f$, and ii) the {\it test set}, composed by 2D simulations, 
-for which we know both the GW signal and the evolution of the ratio, $r (t)$, and that is used to test performance of the algorithm.}
+{Unlike other methods used GW astronomy, the} algorithm proposed in {this work} does not require accurate
+waveforms {in order to infer the properties of the PNS.} {Instead, it relies on the evolution of the
+frequency of oscillation of some particular modes, as seen in the GW spectrum.
+The frequency of these modes depends, in a universal way, on the surface gravity of the PNS
+($r=M_{\rm PNS}/R_{\rm PNS}^2$), in the sense that if at a given time we observe GW emission at a certain
+frequency $f$ we can determine unequivocally the value of the surface gravity, within a certain error,
+regardless of the details of the numerical simulation. In this work we use two sets of simulations: i)
+The {\it model set}, composed by 1D simulations, which is used to build the universal relation (model),
+$r(f)$, linking the ratio $r$ with the observed frequency $f$, and ii) the {\it test set}, composed by
+2D simulations, 
+for which we know both the GW signal and the evolution of the ratio, $r (t)$, and that is used to test
+performance of the algorithm.}
 
 {We have used two different numerical codes in our numerical simulations.} 
 %CoCoNuT
@@ -43,7 +47,7 @@ $M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using the
  \citep{Torres:2019a}. The reason to use one dimensional simulations for the model set
  is that the computational cost of those is significantly smaller than the cost of multidimensional
  simulations, so is easier to accumulate the statistics necessary to build a good model for $r(f)$.}
- \pcd{For each time of each simulation we compute the ratio $r$ and the frequency of the $^2g_2$ mode by means of the linear analysis
+ {For each time of each simulation we compute the ratio $r$ and the frequency of the $^2g_2$ mode by means of the linear analysis
  described in \cite{Torres:2018,Torres:2019a,Torres:2019b}. } 
  
  \begin{table}
@@ -112,9 +116,9 @@ $r_{\mathrm{max}} = 8.3 \times 10^{9} \, \mathrm{cm}$ and
 $n_{\theta} = 128$ equidistant cells in angular direction. For the
 neutrino energies, we used a logarithmic grid with $n_e = 10$ bins up
 to $240 \, \mathrm{MeV}$.
-\pcd{Unlike the model set, the simulations in the test set are not 1D because we need to 
-extract the gravitational wave signal, which is a multi-dimensional effect. For each simulation
-we extract the gravitational wave signal, $h_+(t)$,  by means of the quadrupole formula and compute the 
+{Unlike the model set, the simulations in the test set are not 1D because we need to 
+extract the GW signal, which is a multi-dimensional effect. For each simulation
+the GW signal, $h_+(t)$, is extracted by means of the quadrupole formula and we compute the 
 time evolution of the surface gravity, $r(t)$.}
 
 All spherical and most axisymmetric models fail to achieve shock
@@ -124,7 +128,7 @@ late explosions in axisymmetry. Consequently, mass accretion onto the
 PNSs proceeds at high rates for a long time in all cases and causes
 them to oscillate with their characteristic frequencies. The final
 masses of the PNSs are in the range of
-$M_{\mathrm{PNS}} = 1.47 - 2.33 \, \Msol$, i.e., insufficient for
+$M_{\mathrm{PNS}} = 1.47 - 2.33 \, \Msol$, i.e., likely insufficient for
 producing a black hole.
 
 
