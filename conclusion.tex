@@ -1,4 +1,5 @@
 \section{Conclusion}
+\label{sec:conclusion}
 The algorithm presented in this paper is a first attempt to infer the time evolution of a
 combinaison of the mass of the PNS and its radius based on the universal relations found
 in PNS asteroseismology. More precisely, we have considered in this paper the ratio
@@ -14,16 +15,27 @@ for all waveforms considered here thanks to its excellent sensitivity in the \un
 Among the three configuration of Einstein Telescope, ET-D is providing the best performance,
 especially for the waveforms with the highest progenitor mass (25 $\Msol$ and 40 $\Msol$). Comparing
 $d_r$ for ET-B and the other third generations projects, it seems that having a good sensitivity
-below \unit{200}[Hz] is important for massive mass progenitor signals.
+below \unit[200]{Hz} is important for massive mass progenitor signals.
 
 %The model to infer the ratio as function of the frequency is based on 1D {\sc AENUS-ALCAR} simulations.
 %We have observed that using the other numerical code {\sc CoCoNut} inputs lead to systematic bias of the
 %ratio reconstruction. 
 
-This study does not include the realistic case of operating within a network of detectors. We defer this
-for a forthcoming publication. The sources of GWs we have considered here are optimally oriented. The
-reported distance at which we can infer the time evolution of $r=M_{\rm PNS}/R_{\rm PNS}^2$ are thus an
-upper limit that may be lower by a factor 2--3 on average for a source located anywhere on the sky.
+This study does not include the realistic case of operating within a network of detectors.
+The sources of GWs we have considered here are optimally oriented. The reported distance at which
+we can infer the time evolution of $r=M_{\rm PNS}/R_{\rm PNS}^2$ are thus an upper limit that may be lower
+by a factor 2--3 on average for a source located anywhere on the sky. We defer a more realistic
+simulation implementation for a forthcoming publication. 
+
+Furthermore, the results presented here are based on a model of the frequency evolution of the
+ratio that is making use of AENUS-ALCAR code simulations. Using simulations produced
+with the CoCoNut code, the model fit is a bit different (see Figure \ref{fig:LMVAR}). This systematic
+difference of the two simulation codes is discussed in \cite{Torres:2019b}. If we consider a model based
+on CoCoNut simulations and test the method on test simulations obtained with the AENUS-ALACR code,
+we observe systematic effects in the ratio reconstruction leading to systematically worsen performance.
+As the goal of this paper is to characterize the methods and because both simulation codes have pros
+and cons we have reported results obtained with a model set and test set waveforms obtained with the same
+code.
 
 Finally, this method can be adapted to other PNS oscillation modes, changing few parameters such as
 the frequency range of the beginning of the mode and its monotonic raise or descent. Being able to
