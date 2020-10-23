@@ -40,6 +40,7 @@
 \newcommand{\maob}[1]{\textcolor{maob}{#1}}
 \newcommand{\pcd}[1]{\textcolor{blue}{#1}}
 \newcommand{\mab}[1]{\textcolor{red}{#1}}
+\newcommand{\tf}[1]{\textcolor{green}{#1}}
 
 \newcommand{\Msol}{M_{\odot}}
 
@@ -50,7 +51,7 @@
 \begin{document}
 \linenumbers
 
-\title{Inference of proto-neutron star properties from gravitational wave data in core-collapse supernovae.}
+\title{Inference of proto-neutron star properties from gravitational-wave data in core-collapse supernovae.}
 
 \author{M.~A.~Bizouard}
 \affiliation{Artemis, Universit\'e C\^ote d'Azur, Observatoire C\^ote d'Azur, CNRS, CS 34229, F-06304 Nice Cedex 4, France}
@@ -75,28 +76,31 @@
 
 \author{J.~A.~Font}
 \affiliation{Departamento de Astronom\'{\i }a y Astrof\'{\i }sica, Universitat de Val\`encia, E-46100 Burjassot, Val\`encia, Spain}
+\affiliation{Observatori Astron\`omic, Universitat de Val\`encia, E-46980, Paterna, Val\`encia, Spain} 
 
 \author{R.~Meyer}
 \affiliation{Department of Statistics, The University of Auckland, Auckland, New Zealand}
 
 
 \begin{abstract}
-  Core collapse supernovae are very important phenomena in the Universe and their expected gravitational
-  waves emission is a promising tool to study the onset of the supernova explosion mechanism. The complexity
-  of the gravitational wave signal due to matter effects and the large degrees of freedom of the phenomena
-  makes the source parameter inference problem very challenging. In this paper, we have considered the
-  proto neutron star oscillation modes that carry out a large fraction of the gravitational wave signal and
-  whose frequency time evolution is linked to the system properties through universal relations as
-  demonstrated in ~\cite{Torres:2019b}. We have developed a simple algorithm to extract from the
-  gravitational wave data the frequency evolution of the gravity mode. A set of 1D core collapse
-  supernova simulations is used to build a model of evolution of the proto neutron star properties
-  with the gravity mode frequency. The model is then used to infer the time evolution of a combinaison of
-  the radius and mass of the proto neutron star. We have then estimated the performance of the method by
-  performing simulations with 2D core collapse supernova waveforms covering a progenitor mass range between
-  11 and 40 solar mass and different equations of state. We have shown that for Advanced LIGO and Advanced
-  Virgo detectors at design sensitivity it will be possible to infer proton neutron star properties for
-  a galactic source, while third generation detectors Einstein Telescope and Cosmic Explorer will allow
-  to test distances of several hundreds of kiloparsec.
+The eventual detection of gravitational waves from core-collapse supernovae (CCSN) may help improve our current understanding of the explosion mechanism of massive stars. The stochastic nature of the late post-bounce gravitational wave signal due to matter effects and the large number of degrees of freedom of the phenomenon make the source parameter inference problem very challenging. In this paper we take a step towards that goal and present a parameter estimation approach which is based on the gravitational waves associated with convective oscillations of proto-neutron stars (PNS). Numerical simulations of CCNS have shown that buoyancy-driven g-modes are responsible for a significant fraction of the gravitational wave signal and their time-frequency evolution is linked to the physical properties of the compact remnant through universal relations, as demonstrated in~\cite{Torres:2019b}. We use a set of 1D CCSN simulations to build a model that relates the  evolution of the PNS properties with the frequency of the dominant g-mode, which is extracted from the gravitational-wave data using a new algorithm we have developed for our study. The model is used to infer the time evolution of combinations of the mass and the radius of the PNS. The  performance of the method is estimated employing  simulations of 2D CCSN waveforms covering a progenitor mass range between 11 and 40 solar masses and different equations of state. Our results indicate that it is possible to infer PNS properties for a galactic source using Advanced LIGO and Advanced Virgo at design sensitivities. Third generation detectors such as Einstein Telescope and Cosmic Explorer will allow to test distances of ${\cal O}(100\, {\rm kpc})$. \tf{Caveats? Gaussian noise?}
+% 
+%  Core-collapse supernovae are very important phenomena in the Universe and their expected gravitational
+%  waves emission is a promising tool to study the onset of the supernova explosion mechanism. The complexity
+%  of the gravitational wave signal due to matter effects and the large degrees of freedom of the phenomena
+%  makes the source parameter inference problem very challenging. In this paper, we have considered the
+%  proto neutron star oscillation modes that carry out a large fraction of the gravitational wave signal and
+%  whose frequency time evolution is linked to the system properties through universal relations as
+%  demonstrated in ~\cite{Torres:2019b}. We have developed a simple algorithm to extract from the
+%  gravitational wave data the frequency evolution of the gravity mode. A set of 1D core collapse
+%  supernova simulations is used to build a model of evolution of the proto neutron star properties
+%  with the gravity mode frequency. The model is then used to infer the time evolution of a combinaison of
+%  the radius and mass of the proto neutron star. We have then estimated the performance of the method by
+%  performing simulations with 2D core collapse supernova waveforms covering a progenitor mass range between
+%  11 and 40 solar mass and different equations of state. We have shown that for Advanced LIGO and Advanced
+%  Virgo detectors at design sensitivity it will be possible to infer proton neutron star properties for
+%  a galactic source, while third generation detectors Einstein Telescope and Cosmic Explorer will allow
+%  to test distances of several hundreds of kiloparsec.
   
 \end{abstract}
 
