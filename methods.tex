@@ -111,8 +111,8 @@ We collect the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_
 the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
 for values in between the $t_i$. We then use our model given by Eq.~\eqref{eq:model1} to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
-An example is given in Figure \ref{fig:ratio} where the red points are the point estimates and
-the grey bands represent 95\% confidence bands. Ratio values
+An example is given in Figure \ref{fig:ratio} where the red triangles \sout{points} are the point estimates and
+the grey bands represent 95\% confidence bands. {\color{red} The size of the red triangles are proportional to the magnitude of the $\mbox{}^2 g_2$-mode estimates.  Note that high $\mbox{}^2 g_2$-mode values have associated more uncertainty (bigger intervals) because our model allows heterogeneous variance.} Ratio values
 computed using the mass and radius values obtained from the simulation code \pcd{(true values)}
 are shown in black.
 In this example of a GW signal without noise the coverage of our 95\% confidence band is 100\%
@@ -123,7 +123,7 @@ signal is embedded in noise.
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth]{plots/ratio}
- \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ as function of time extracted from the $\mbox{}^2 g_2$-mode of the {\texttt s20S} signal (red points and the 95\% confidence belt in grey) compared to the ratio value derived from the PNS mass and radius given by the simulation code (black points).} \label{fig:ratio}
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ as function of time {\color{red}estimated} \sout{extracted} from the $\mbox{}^2 g_2$-mode of the {\texttt s20S} signal (red {\color{red}triangles} \sout{points} and the 95\% confidence belt in grey) compared to the ratio value derived from the PNS mass and radius given by the simulation code (black points).  Estimated ratios are represented proportionally to the magnitude of the $\mbox{}^2 g_2$-mode estimates. } \label{fig:ratio}
 \end{figure}
 
 
