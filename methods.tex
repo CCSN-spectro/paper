@@ -2,35 +2,39 @@
 \section{Methods description}
 \label{methods}
 
-In this section, we outline a strategy for estimating the time evolution of the
-ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ (in units of solar mass and km) from the observation of the $\mbox{}^2g_2$
-oscillation mode in the GW detector data.
-An integral part of this strategy is the universal relations that relate the
-characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes with the mass
-and the radius of the PNS, the shock radius and the total mass inside the shock as
-demonstrated in \cite{Torres:2019b}.
+\begin{figure}[t]
+ \centering
+ \includegraphics[width=0.45\textwidth]{plots/model}
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from our 25 1D simulations of the model set. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering the 18 simulation data points. \tf{18 or 25?} \tf{We could remove the legend as only one code is used.} } 
+ \label{fig:LMVAR}
+\end{figure}
 
+We next outline our strategy for estimating the time evolution of $r(t)$
+%ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ (in units of solar mass and km) 
+from the observation of the $\mbox{}^2g_2$ oscillation mode in the GW detector data.
+%An integral part of this strategy is the universal relations that relate the
+%characteristic frequency of the PNS oscillation $f$, $g$ and $p$ modes with the mass
+%and the radius of the PNS, the shock radius and the total mass inside the shock as
+%demonstrated in \cite{Torres:2019b}.
 To build the model of the ratio $r$ as a function of the frequency $f$ we use the 
-spherically symetric (1D) simulations of the {\it model set}. Figure~\ref{fig:LMVAR}
-shows the data for the $25$ numerical simulations. As identified by \cite{Torres:2019b}, the only systematic
-deviation from a single universal relation is the numerical code used in the simulations. 
+1D simulations of the {\it model set}. Figure~\ref{fig:LMVAR}
+shows the data for the $25$ numerical simulations. 
+%As identified by \cite{Torres:2019b}, the only systematic deviation from a single universal relation is the numerical code used in the simulations. 
 %To avoid any systematic effect, we only use the $18$ simulations performed with the {\sc AENUS-ALCAR}
 %code, which is the same code that was used in our test set.
 %\mab{We defer a discussion of the possible consequences of this choice in Section \ref{sec:conclusion}.}
 %The consequences of this choice are discussed in the conclusions.
-Using this data, we parametrize the discretized ratio $r_i$ with a cubic polynomial
+Using these data we parametrize the discretized ratio $r_i$ with a cubic polynomial
 regression with heteroscedastic errors
-%Here we are using the data from \textcolor{red}{only {\sc AENUS-ALCAR} or both?, maybe colour-code the two groups of data points } to fit a cubic polyn
-
 \begin{equation}
 \label{eq:model1}
-r_i=\beta_1 f_i + \beta_2 f_i^2 +\beta_3 f_i^3 + \epsilon_i
+r_i=\beta_1 f_i + \beta_2 f_i^2 +\beta_3 f_i^3 + \epsilon_i\,,
 \end{equation}
 where $\epsilon_i$ are assumed to be independent zero-mean Gaussian errors with
 variances $\sigma_i^2$ that increase with frequency $f_i$. The model for frequency-dependent
 variances is
 \begin{equation}
-\log \sigma_i=\alpha_0+ \alpha_1 f_i + \alpha_2 f_i^2 + \delta_i
+\log \sigma_i=\alpha_0+ \alpha_1 f_i + \alpha_2 f_i^2 + \delta_i\,,
 \end{equation}
 with independent and identically zero-mean Gaussian errors $\delta_i$. The R-package \texttt{lmvar}
 \cite{lmvar:2019} that implements a maximum likelihood approach was used to fit the model.
@@ -72,58 +76,50 @@ Figure~\ref{fig:LMVAR}.
 \caption{Estimate and standard error of the coefficients of the best fit model describing the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ as function of the frequency of the $\mbox{}^2g_2$ mode.}\label{tab:model}
 \end{table}
 
-\begin{figure}
- \centering
- \includegraphics[width=0.5\textwidth]{plots/model}
-% \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from 25 1D simulations {\sc AENUS-ALCAR} (red) and {\sc CoCoNuT} (green) code. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering \pcd{only} the  {\sc AENUS-ALCAR} data points \pcd{($18$ simulations)}. \mab{To be redone in python}} \label{fig:LMVAR}
- \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from 25 1D simulations using {\sc AENUS-ALCAR} code. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering the 18 simulation data points. } \label{fig:LMVAR}
 
-\end{figure}
 
 {We use this model to infer the properties of the simulations in the 
-{\it test set} described in in Section \ref{sec:simulations}.}
+{\it test set} discussed in Section \ref{sec:simulations}.}
 To describe the method we focus on the GW signal
-of {\texttt s20S}, originally
-sampled at 16384 Hz but resampled at 4096 Hz.
+of model {\texttt s20S}, originally
+sampled at 16384 Hz but downsampled at 4096 Hz.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
-autoregressive estimates \pcd{[add ref?]}of the local spectra for successive time intervals of 
-\textcolor{red}{length 200} with a \textcolor{red}{ 90\%} overlap.
+autoregressive estimates \pcd{[add ref?]} of the local spectra for successive time intervals of 
+length 200 with a 90\% overlap.
 The dominant emission mode corresponds to the PNS oscillation $\mbox{}^2 g_2$-mode. We have
-developed a time-frequency method to track the ridge $m(t) $in the spectrogram,
-taking into account that it is monotonically increasing as time goes. 
-{This is a property of the $\mbox{}^2 g_2$-mode, the frequency of which  
-increases as the object becomes more massive and compact}.
+developed a time-frequency method to track the ridge $m(t) $ in the spectrogram,
+taking into account that it is monotonically increasing with time. 
+This is a property of the $\mbox{}^2 g_2$-mode whose frequency   
+increases as the PNS becomes more massive and compact.
 Starting from either the left- or right-most column of the time-frequency matrix
 we identify and trace the sequence of amplitude peaks within a certain frequency
-band given the monotonicity constraint. Appendix \ref{app:gmode} is providing more
-details on the reconstruction of the $g$ mode ridge. 
-
+band given the monotonicity constraint. Specific details about the reconstruction of the $\mbox{}^2 g_2$-mode ridge 
+are provided in Appendix \ref{app:gmode}. 
 
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth]{plots/spectrogram}
  \caption{Spectrogram of the GW signal {\texttt s20S} sampled at \unit[4096]{Hz}.
-   The spectrogram is obtained using data streach of 200 samples overlapping at 90\%
-   with each other.} \label{fig:spectrogram}
+   The spectrogram is obtained using a data streach of 200 samples overlapping at 90\%
+   with each other. The open circles track the ridge $m(t) $ of the $\mbox{}^2 g_2$-mode. } \label{fig:spectrogram}
 \end{figure}
 
 We collect the instantaneous frequency $f(t_i)$ corresponding to the ridge $m(t_i)$ for
-the midpoint $t_i$ of each local time interval of the spectrogram and interpolating $f(t)$
-for values in between the $t_i$. We then use our model given by Eq.~\eqref{eq:model1} to obtain
+the midpoint $t_i$ of each local time interval of the spectrogram and interpolate $f(t)$
+for values in between $t_i$. We then use our model given by Eq.~\eqref{eq:model1} to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
-An example is given in Figure \ref{fig:ratio} where the red triangles \sout{points} are the point estimates and
-the grey bands represent 95\% confidence bands. {\color{red} The size of the red triangles are proportional to the magnitude of the $\mbox{}^2 g_2$-mode estimates.  Note that high $\mbox{}^2 g_2$-mode values have associated more uncertainty (bigger intervals) because our model allows heterogeneous variance.} Ratio values
-computed using the mass and radius values obtained from the simulation code \pcd{(true values)}
-are shown in black.
-In this example of a GW signal without noise the coverage of our 95\% confidence band is 100\%
-of the true values.
-In the next section we investigate the performance of the reconstruction of $r(t)$ when the GW
-signal is embedded in noise.
+An example is given in Figure \ref{fig:ratio} where the red triangles are the point estimates and
+the grey bands represent 95\% confidence bands. The size of the red triangles is proportional to the magnitude of the $\mbox{}^2 g_2$-mode estimates.  Note that as the frequency of the $\mbox{}^2 g_2$-mode becomes higher our estimates show more uncertainty (bigger intervals) because our model allows for heterogeneous variance. Ratio values
+computed using the mass and radius values obtained from the simulation code (i.e.~the true values)
+are shown in black. In this example of a noise-free GW signal the coverage of our 95\% confidence band is 100\%
+of the true values. In the next section we investigate the performance of the reconstruction of $r(t)$ when the GW
+signal is embedded in noise. \tf{We also note that despite we have only explicitely shown results for the GW signal of the {\texttt s20S} model the same conclusions hold for any of the other waveforms of our test set.}
 
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth]{plots/ratio}
- \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ as function of time {\color{red}estimated} \sout{extracted} from the $\mbox{}^2 g_2$-mode of the {\texttt s20S} signal (red {\color{red}triangles} \sout{points} and the 95\% confidence belt in grey) compared to the ratio value derived from the PNS mass and radius given by the simulation code (black points).  Estimated ratios are represented proportionally to the magnitude of the $\mbox{}^2 g_2$-mode estimates. } \label{fig:ratio}
+ \caption{Comparison of the time evolution of the ratio $M_{\rm PNS}/R_{\rm PNS}^2$ estimated from the $\mbox{}^2 g_2$-mode of the {\texttt s20S} signal (shown by open triangles and by the 95\% confidence belt in grey) against the value derived from the PNS mass and radius given by the simulation code (shown by filled black circles).  The ratios are represented proportionally to the magnitude of the $\mbox{}^2 g_2$-mode estimates.}
+ \label{fig:ratio}
 \end{figure}
 
 
