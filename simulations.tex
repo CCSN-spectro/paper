@@ -2,22 +2,18 @@
 \section{Core collapse supernova simulations}
 \label{sec:simulations}
 
-% \textbf{Martin's simulations and code description}\\
-% \textbf{1D simlation data to fit the ratio vs frequency model - AA and CoConut outputs}
+Unlike other methods used in GW astronomy the algorithm proposed in {this work} does not require accurate
+waveforms {in order to infer the properties of the PNS.} Instead, it relies on the evolution of the oscillation
+frequency of some particular modes visible in the GW spectrum.
+The frequency of these modes depends in a universal way on the surface gravity of the PNS, $r\equiv M_{\rm PNS}/R_{\rm PNS}^2$ \citep{Torres:2019b}. Therefore, if at a given time GW emission is observed at a certain
+frequency $f$ then the value of the surface gravity can be determined unequivocally, within a certain error,
+regardless of the details of the numerical simulation. 
 
-
-{Unlike other methods used GW astronomy, the} algorithm proposed in {this work} does not require accurate
-waveforms {in order to infer the properties of the PNS.} {Instead, it relies on the evolution of the
-frequency of oscillation of some particular modes, as seen in the GW spectrum.
-The frequency of these modes depends, in a universal way, on the surface gravity of the PNS
-($r=M_{\rm PNS}/R_{\rm PNS}^2$), in the sense that if at a given time we observe GW emission at a certain
-frequency $f$ we can determine unequivocally the value of the surface gravity, within a certain error,
-regardless of the details of the numerical simulation. In this work we use two sets of simulations: i)
-The {\it model set}, composed by 1D simulations, which is used to build the universal relation (model),
-$r(f)$, linking the ratio $r$ with the observed frequency $f$, and ii) the {\it test set}, composed by
+In this work we use two sets of simulations: i) the {\it model set}, composed by 1D simulations, which is used to build the 
+universal relation (model), $r(f)$, linking the ratio $r$ with the observed frequency $f$, and ii) the {\it test set}, composed by
 2D simulations, 
 for which we know both the GW signal and the evolution of the ratio, $r (t)$, and that is used to test
-performance of the algorithm.}
+performance of the algorithm.
 
 %{We have used two different numerical codes in our numerical simulations.} 
 %CoCoNuT
@@ -29,26 +25,25 @@ performance of the algorithm.}
 %relativistic hydrodynamics coupled to the Fast Multigroup Transport
 %scheme \citep{Mueller_Janka_2015_FMT} providing an approximate
 %description of the emission and transport of neutrinos.
-\mab{Both the {\it model set} and {\it test set} simulations have been generated using the numerical
-  relativity code AENUS-ALCAR
+Both the {\it model set} and {\it test set} simulations have been generated using the AENUS-ALCAR code
 \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}
-which }combines special relativistic (magneto-)hydrodynamics, a modified
+which combines special relativistic (magneto-)hydrodynamics, a modified
 Newtonian gravitational potential approximating the effects of general
 relativity \citep{Marek_etal__2006__AA__TOV-potential}, and a spectral
 two-moment neutrino transport solver
 \citep{Just_et_al__2015__mnras__Anewmultidimensionalenergy-dependenttwo-momenttransportcodeforneutrino-hydrodynamics}.
-We included the relevant reactions between matter and neutrinos of all
+All siimulations include the relevant reactions between matter and neutrinos of all
 flavours, i.e., emission and absorption by nucleons and nuclei,
 electron-positron pair annihilation, nucleonic bremsstrahlung, and
 scattering off nucleons, nuclei, and electrons.
 
-{For the {\it model set}, we use the $25$ spherically symmetric (1D) simulations of \citep{Torres:2019a}
+For the {\it model set}, we use the $25$ spherically symmetric (1D) simulations of \citep{Torres:2019a}
 including progenitors with zero-age main sequence (ZAMS) masses in the range 
-$M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using the
- two numerical codes and six different equations of state. Details can be found in
- \citep{Torres:2019a}. The reason to use one dimensional simulations for the model set
- is that the computational cost of those is significantly smaller than the cost of multidimensional
- simulations, so is easier to accumulate the statistics necessary to build a good model for $r(f)$.}
+$M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using  
+six different EOS. Details can be found in
+ \citep{Torres:2019a}. The reason to use 1D simulations for the model set
+ is that their computational cost is significantly smaller than that of multidimensional
+ simulations which allows us to accumulate the statistics necessary to build a good model for $r(f)$.
  {For each time of each simulation we compute the ratio $r$ and the frequency of the $^2g_2$ mode by means of the linear analysis
  described in \cite{Torres:2018,Torres:2019a,Torres:2019b}. } 
  
@@ -87,35 +82,33 @@ $M_{\mathrm{ZAMS}} = 11.2 - 75 \, \Msol$. The set contains simulations using the
  \label{Tab:2dSimList}
 \end{table}
 
- 
-{For the {\it test set}, we use $8$ axisymmetric (2D) simulations using the {\sc AENUS-ALCAR} code
+{For the {\it test set}, we use $8$ axisymmetric (2D) simulations performed with the {\sc AENUS-ALCAR} code
 (see Table~\ref{Tab:2dSimList} for a list of models).
-$7$ of these simulations use a selection of progenitors with masses in the range} $M_{\mathrm{ZAMS}} = 11.2 - 40 \, \Msol$
+All of these simulations but model \texttt{s20S} use a selection of progenitors with masses in the range} $M_{\mathrm{ZAMS}} = 11.2 - 40 \, \Msol$
  evolved through the hydrostatic phases by
 \cite{Woosley_Heger_Weaver__2002__ReviewsofModernPhysics__The_evolution_and_explosion_of_massive_stars}.
-We performed one simulation of each stellar model using the equation
-of state of \cite{Lattimer_Swesty__1991__NuclearPhysicsA__LS-EOS} with
+We performed one simulation of each stellar model using the EOS of \cite{Lattimer_Swesty__1991__NuclearPhysicsA__LS-EOS} with
 an incompressibility of $K = 220 \, \mathrm{MeV}$ (LS220) and added
 comparison simulations with the SFHo EOS
 \cite{Steiner_et_al__2013__apj__Core-collapseSupernovaEquationsofStateBasedonNeutronStarObservations}
 and the GShen EOS 
 \cite{Shen_et_al__2011__prc__Newequationofstateforastrophysicalsimulations}
 for the {progenitor} with $M_{\mathrm{ZAMS}} = 15 \, \Msol$. To this set of
-simulations, we add the waveform of a two-dimensional model used in
+simulations we add the waveform of a 2D model used in
 \cite{Torres:2019a}, denoted \texttt{s20S}. It corresponds to a star
 with the same initial mass, $M_{\mathrm{ZAMS}} = 20 \, \Msol$, as for
-one of the other 7 axisymmetric simulations, but was taken from a
+one of the other seven axisymmetric simulations, but was taken from a
 newer set of stellar-evolution models
 \cite{Woosley_Heger__2007__physrep__Nucleosynthesisandremnantsinmassivestarsofsolarmetallicity}.
 It was evolved with the SFHo EOS.
 
 
 {For all the simulations,} we mapped the pre-collapse state of the stars to a spherical
-coordinate system with $n_r = 400$ zones in radial direction
+coordinate system with $n_r = 400$ zones in the radial direction
 distributed logarithmically with a minimum grid width of
 $(\Delta r)_{\mathrm{min}} = 400 \, \mathrm{m}$ and an outer radius of
 $r_{\mathrm{max}} = 8.3 \times 10^{9} \, \mathrm{cm}$ and
-$n_{\theta} = 128$ equidistant cells in angular direction. For the
+$n_{\theta} = 128$ equidistant cells in the angular (polar) direction. For the
 neutrino energies, we used a logarithmic grid with $n_e = 10$ bins up
 to $240 \, \mathrm{MeV}$.
 {Unlike the model set, the simulations in the test set are not 1D because we need to 
@@ -123,7 +116,7 @@ extract the GW signal, which is a multi-dimensional effect. For each simulation
 the GW signal, $h_+(t)$, is extracted by means of the quadrupole formula and we compute the 
 time evolution of the surface gravity, $r(t)$.}
 
-All spherical and most axisymmetric models fail to achieve shock
+All spherical and most axisymmetric models we evolved fail to achieve shock
 revival during the time of our simulations. Only the two stars with
 the highest masses, \texttt{s25} and \texttt{s40}, develop relatively
 late explosions in axisymmetry. Consequently, mass accretion onto the
