@@ -2,65 +2,46 @@
 \section{Detection sensitivity with Advanced gravitational wave detectors}
 \label{sec:results}
 
-To estimate how accurately we can infer the time evolution of $r=M_{\rm PNS}/R_{\rm PNS}^2$ in a single
-detector GW data, we have added the GW signal {\texttt s20S} to 
-100 Gaussian noise realisations whose power spectral density follows the Advanced LIGO (aLIGO)
-spectrum~\cite{aLIGOsens:2018} shown on Figure~\ref{fig:spectrum}. 
+To estimate how accurately we can infer the time evolution of $r(t)$ in the GW data of a single
+detector we inject the GW signal for model {\texttt s20S} into 
+100 Gaussian noise realisations whose power spectral density (PSD) follows the aLIGO
+spectrum~\cite{aLIGOsens:2018}. The PSD of aLIGO and AdV at design sensitivities, along with those of planned third-generation detectors, are shown in Figure~\ref{fig:spectrum}. 
 
-\begin{figure}
+\begin{figure}[t]
  \centering
  \includegraphics[width=0.5\textwidth]{plots/spectrum}
- \caption{Amplitude spectral density of the GW detectors Advanced LIGO (aLIGO) and Advanced Virgo (ADV) at design sensitivity and of the proposed third generation detectors Cosmic Explorer and Einstein Telescope. Eintein Telescope sensitivity curve ET-B is obtained pushing second generation detector technology at its limit. ET-C and ET-D sensitivity curves correspond to a detector configuration where a low-power cryogenic low-frequency interferometer and a high-power room temperature high-frequency interferometer are sharing the same infrastructure~\cite{Hild_2011}. Cosmic Explorer design sensitivity will be achieved in two stages. Stage 1 (CE1) is expected to use the technology developed for the “A+” upgrade to Advanced LIGO but scaled up to a 40 km detector while stage 2 (CE2) will implement state-of-the-art technology to decrease quantum and thermal noises~\cite{reitze2019cosmic}. } \label{fig:spectrum}
+ \caption{Amplitude spectral density of the GW detectors aLIGO and AdV at design sensitivity and that of the proposed third-generation detectors Cosmic Explorer and Einstein Telescope. Einstein Telescope sensitivity curve ET-B is obtained pushing second-generation detector technology at its limit. ET-C and ET-D sensitivity curves correspond to a detector configuration where a low-power cryogenic low-frequency interferometer and a high-power room temperature high-frequency interferometer are sharing the same infrastructure~\cite{Hild_2011}. Cosmic Explorer design sensitivity will be achieved in two stages. Stage 1 (CE1) is expected to use the technology developed for the ``A+'' upgrade to aLIGO but scaled up to a 40 km detector while stage 2 (CE2) will implement state-of-the-art technology to decrease quantum and thermal noises~\cite{reitze2019cosmic}. } \label{fig:spectrum}
 \end{figure}
 
-We have covered a large range of distances for which a detection in second generation of GW
-detectors is feasible. The source is optimally oriented with
-respect to the GW single detector. We are assuming a GW signal from a core collapse
-phenomena has been identified in the data and that the beginning of the GW signal is known within $O(10~ms)$.
-The data (signal embedded in noise) are whitened using the function {\it prewhiten} of the R-package TSA.
-An auto-regressive model with maximal \textcolor{red}{100} coefficients has been used.    
+We cover a large range of distances for which a CCSN detection in second-generation GW detectors is feasible. We assume that the source is optimally oriented with respect to our single detector. Moreover, we also assume that a CCSN GW signal has been identified in the data and that the beginning of the signal is known within {$\mathcal O$}(10 ms). The data (signal embedded in noise) are whitened using the function {\tt prewhiten} of the R-package {\tt TSA}. An auto-regressive model with a maximum of maximal 100 coefficients is used.    
 
-For each of the noise realizations, we reconstruct the ratio time series {$r_i$}
-of length $N$ starting from the left side of the spectrogram and constraining the beginning of the
-track to be smaller than \unit[200]{Hz}. The reconstructed ratio is then compared to the ``true'' ratio
-{$r_i^0$} derived from the PNS mass and radius computed from the {\texttt s20S} simulation.
-
-Figure \ref{fig:s20results} shows the distribution of the fraction of the ratio {$r_i^0$} values
-that fall within the 95\% confidence interval of {$r_i$}. This quantity, $coverage$, is taking maximal values
-when the source is located within few kpc and then decreases with the distance.
-
-To better quantify how well we reconstruct the ratio, we have also considered $\Delta$ the mean
-over the track of the relative error of $r_i$. 
-
-\begin{equation}
-\Delta=\frac{1}{N}\sum_1^N\frac{|r_i-r_i^0|}{r_i^0}
-\end{equation}
-
-$\Delta$ values of each of the 100 noise realisation are shown as well as function of the distance
-on Figure \ref{fig:s20results}. For a source located up to $\sim$\unit[9]{kpc} the relative error
-remains smaller than 20\%.
-At small distances, $\Delta$ is small but not null. This reflects the approximation of the model used for $r$.
-It is nevertheless remarkable that, on average, one can reconstruct the ratio time series with a good
-precision at distance up to $\sim$ 9 kpc for this particular waveform, with $coverage$ value
-larger than 80\%. There are few noise realizations for a source located at $<$ \unit[9]{kpc} for which
-$\Delta$ takes large values, indicating that the method start failing to reconstruct with accuracy the ratio.
-
-\begin{figure}
+\begin{figure}[t]
   \centering
   \begin{tabular}{c}
     \includegraphics[width=0.5\textwidth]{plots/s20--SFHo_covpbb_boxplot_aLIGO} \\
     \includegraphics[width=0.5\textwidth]{plots/s20--SFHo_error_boxplot_aLIGO} \\
   \end{tabular}
     
- \caption{Boxplots of the $coverage$ (upper panel) and $\Delta$ (lower panel) for {\texttt s20S} signal embedded in aLIGO noise at different distances from the Earth. 100 noise realizations are considered for each distance.}
+ \caption{Boxplots of the $coverage$ (upper panel) and $\Delta$ (lower panel) for {\texttt s20S} signal embedded in aLIGO noise at different distances from the Earth. 100 noise realizations are considered for each distance. \tf{We should explain a bit more the symbols and colours that appear in the plots.}}
   \label{fig:s20results}
 \end{figure}
 
-We have tested that the method does not depend on features of {\texttt s20S} using the 7
-other waveforms of the {\it test set} described in section \ref{sec:simulations} covering
-a large range of progenitor masses.
+For each of the noise realizations we reconstruct the ratio time series {$r_i$} of length $N$ starting from the left side of the spectrogram and constraining the beginning of the track to be smaller than \unit[200]{Hz}. The reconstructed ratio is then compared to the ``true'' ratio {$r_i^0$} derived from the PNS mass and radius computed from the {\texttt s20S} simulation. The top panel of Fig.~\ref{fig:s20results} shows the distribution of the fraction of the ratio values {$r_i^0$} that fall within the 95\% confidence interval of {$r_i$} as a function of the distance to the source. This quantity, hence, gives information about the {\it coverage} of the reconstructed ratio. The coverage takes maximum values when the source is located within a few kpc and then decreases with the distance.
 
-Figure \ref{fig:aLIGO_cov_allwvf} shows that apart from {\texttt s11} and to a lesser extent
+To better quantify how well we reconstruct the ratio we also consider  the mean of the relative error of $r_i$ along 
+the track of the spectrogram, $\Delta$,  
+\begin{equation}
+\Delta=\frac{1}{N}\sum_1^N\frac{|r_i-r_i^0|}{r_i^0}\,.
+\end{equation}
+The values of $\Delta$ for each of the 100 noise realizations are shown as a function of the distance
+in the bottom panel of Fig.~\ref{fig:s20results}. For a source located up to $\sim$\unit[9]{kpc} the relative error
+remains smaller than 20\%. At closer distances $\Delta$ is smaller but it does not vanish. This reflects the approximate nature of the model used for $r$. It is nevertheless remarkable that, on average, one can reconstruct the ratio time series with a good
+precision up to distances of $\sim$ 9 kpc (for this particular waveform) with a coverage value
+larger than 80\%. We note that there are a few noise realizations for distances below 9 kpc for which
+$\Delta$ takes large values, indicating that the method fails to accurately reconstruct the ratio in those case. \tf{Do we know why that is the case? What is intrinsically different from one noise realisation to another that makes the method more prone to failure? I think we should provide some explanation here, if we have it.}
+
+We have tested that the method does not depend on the specific features of the waveform of model {\texttt s20S} by repeating the procedure for the remaining seven waveforms of the {\it test set} described in Section \ref{sec:simulations} covering
+a large range of progenitor masses. Figure \ref{fig:aLIGO_cov_allwvf} shows that apart from {\texttt s11} and to a lesser extent
 {\texttt s20S}, the ratio is well reconstructed for all waveforms up to $\sim$ 15kpc. In an
 effort to better determine the maximal distance of the source at which we can reconstruct the ratio
 we have run 100 simulations without injecting a signal and have measured $coverage$ for the
