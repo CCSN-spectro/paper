@@ -26,7 +26,8 @@ We cover a large range of distances for which a CCSN detection in second-generat
   \label{fig:s20results}
 \end{figure}
 
-For each of the noise realizations we reconstruct the ratio time series {$r_i$} of length $N$ starting from the left side of the spectrogram and constraining the beginning of the track to be smaller than \unit[200]{Hz}. The reconstructed ratio is then compared to the ``true'' ratio {$r_i^0$} derived from the PNS mass and radius computed from the {\texttt s20S} simulation. The top panel of Fig.~\ref{fig:s20results} shows the distribution of the fraction of the ratio values {$r_i^0$} that fall within the 95\% confidence interval of {$r_i$} as a function of the distance to the source. This quantity, hence, gives information about the {\it coverage} of the reconstructed ratio. The coverage takes maximum values when the source is located within a few kpc and then decreases with the distance.
+For each of the noise realizations we reconstruct the ratio time series {$r_i$} of length $N$ starting from the left side of the spectrogram and constraining the beginning of the track to be smaller than \unit[200]{Hz}. \tf{Perhaps we should mention that this value is chosen using the information on the initial mode frequency from the simulations.}
+The reconstructed ratio is then compared to the ``true'' ratio {$r_i^0$} derived from the PNS mass and radius computed from the {\texttt s20S} simulation. The top panel of Fig.~\ref{fig:s20results} shows the distribution of the fraction of the ratio values {$r_i^0$} that fall within the 95\% confidence interval of {$r_i$} as a function of the distance to the source. This quantity, hence, gives information about the {\it coverage} of the reconstructed ratio. The coverage takes maximum values when the source is located within a few kpc and then decreases with the distance.
 
 To better quantify how well we reconstruct the ratio we also consider  the mean of the relative error of $r_i$ along 
 the track of the spectrogram, $\Delta$,  
@@ -40,23 +41,26 @@ precision up to distances of $\sim$ 9 kpc (for this particular waveform) with a 
 larger than 80\%. We note that there are a few noise realizations for distances below 9 kpc for which
 $\Delta$ takes large values, indicating that the method fails to accurately reconstruct the ratio in those case. \tf{Do we know why that is the case? What is intrinsically different from one noise realisation to another that makes the method more prone to failure? I think we should provide some explanation here, if we have it.}
 
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/aLIGO_coverage_allwvfs}
+ \caption{Median of the coverage for the eight CCSN waveforms of the {\it test set} embedded in aLIGO noise as a function of the  distance to the source. The ``no signal'' line and band show the median and first and third quartile of coverage in absence of any signal. The line of the latter is zero and overlaps with the horizontal axis (see main text for details). \tf{Perhaps is more consistent to use in the legend the same model names as in Table 1. Some of the colours are really hard to see, particularly for s20S. That could perhaps be improved if we use thicker lines. I'm confused about the quartiles shown.}} \label{fig:aLIGO_cov_allwvf}
+\end{figure}
+
 We have tested that the method does not depend on the specific features of the waveform of model {\texttt s20S} by repeating the procedure for the remaining seven waveforms of the {\it test set} described in Section \ref{sec:simulations} covering
-a large range of progenitor masses. Figure \ref{fig:aLIGO_cov_allwvf} shows that apart from {\texttt s11} and to a lesser extent
-{\texttt s20S}, the ratio is well reconstructed for all waveforms up to $\sim$ 15kpc. In an
-effort to better determine the maximal distance of the source at which we can reconstruct the ratio
-we have run 100 simulations without injecting a signal and have measured $coverage$ for the
-reconstructed ratios.
-The median of $coverage$ as well as the 95 quartile are shown on Figure \ref{fig:aLIGO_cov_allwvf}.
-The noise only median value is null in this case, but it can be different from zero because
-the g-mode reconstruction algorithm is looking for a continuously frequency increasing track
+a large range of progenitor masses. Figure \ref{fig:aLIGO_cov_allwvf} shows that apart from model {\texttt s11} and to a lesser extent model {\texttt s20S}, the ratio is well reconstructed for all waveforms up to a distance of $\sim$ 15kpc. In an
+effort to better determine the maximal distance of the source at which we can reconstruct the ratio we have run 100 simulations without injecting a signal and have measured the corresponding coverage for the reconstructed ratios.
+The median of the coverage as well as the 95 quartile are shown in Figure \ref{fig:aLIGO_cov_allwvf}. \tf{This seems inconsistent with what is written in the caption, which indicates the third quartile.}
+The noise only median value is identically zero in this case. However, note that it could be different from zero because
+the g-mode reconstruction algorithm is looking for a continuously  increasing frequency track
 in the spectrogram, starting between 0 and 200 Hz, where we expect the GW signal to be.
-This is enhancing the probability of overlap. This effects explains why outliers can reach
-values as high as 80\%.
-Figure \ref{fig:aLIGO_prec_allwvf} shows $\Delta$ as function of the distance for the same signals
-as well as the result when only noise is considered. 
-In Table \ref{tab:results} we are reporting the distance $d_r$ at which $coverage$ median is lower
-than 95\% of the noise only values. We have checked that $coverage$ and $\Delta$ provide similar
-values.
+This is enhancing the probability of overlap. This effect explains why outliers can reach
+values as high as 80\%. \tf{I don't understand this last comment.}
+
+Figure \ref{fig:aLIGO_prec_allwvf} shows the relative error $\Delta$ as a function of the distance for the signals of the {\it test set}
+as well as the result when only noise is considered. This quantity follows the same trend than that followed by the coverage, since all signals but models {\texttt s11} and {\texttt s20S} are reconstructed with relative errors below 20\% up to distances of $\sim$ 15kpc. Correspondingly, the no-signal case yields the largest error, as expected.
+
+Table \ref{tab:results} reports the source distances $d_r$ in kpc at which the median of the coverage is lower than 95\% of the noise only values for aLIGO, AdV, and different configurations of third-generation detectors. We have checked that using either the median of the coverage or the median of $\Delta$ provide similar results for the distance.
 These numbers are an estimate of the order of magnitude of the source maximal distance at which a
 reconstruction of the ratio could be possible with current GW detectors.
 They are also upper limits as we are taking into account the detector antenna response in our
@@ -66,16 +70,14 @@ Results are very similar to aLIGO, despite the detector sensitivity differences.
 Note that Table \ref{tab:results} provides the distance at which one could detect a source
 optimally oriented with a matched filter signal-to-noise ratio of 13.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{plots/aLIGO_coverage_allwvfs}
- \caption{Median of $coverage$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. The ``no signal'' line and band show the median and first and third quartile of $coverage$ in absence of any signal.} \label{fig:aLIGO_cov_allwvf}
-\end{figure}
+
 
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{plots/aLIGO_delta_allwvfs}
- \caption{Median of $\Delta$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. The ``no signal'' line and band show the median and first and third quartile of $\Delta$ in absence of any signal.} \label{fig:aLIGO_prec_allwvf}
+ \caption{Same as Fig.~\ref{fig:aLIGO_cov_allwvf} but for the relative error $\Delta$. \tf{Same comments as for Fig.~\ref{fig:aLIGO_cov_allwvf}.}}
+% Median of $\Delta$ for 8 CCSN waveforms embedded in aLIGO noise and located at different distance from the Earth. The ``no signal'' line and band show the median and first and third quartile of $\Delta$ in absence of any signal.} 
+\label{fig:aLIGO_prec_allwvf}
 \end{figure}
 
 The same analysis has been performed using expected sensitivity curves for the third generation of
