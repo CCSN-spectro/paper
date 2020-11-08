@@ -1,5 +1,6 @@
 % !TEX root = ccsn.tex
-\section{Detection sensitivity with Advanced gravitational wave detectors}
+%\section{Detection sensitivity with Advanced gravitational wave detectors}
+\section{Detectability prospects}
 \label{sec:results}
 
 \begin{figure}[t]
@@ -18,8 +19,6 @@
  \caption{Boxplots of the $coverage$ (upper panel) and $\Delta$ (lower panel) for {\texttt s20S} signal embedded in aLIGO noise at different distances from the Earth. 100 noise realizations are considered for each distance. \tf{We should explain a bit more the symbols and colours that appear in the plots.}}
   \label{fig:s20results}
 \end{figure}
-
-\tf{We probably need a better title for this section.}
 
 To estimate how accurately we can infer the time evolution of $r(t)$ in the GW data of a single
 detector we inject the GW signal for model {\texttt s20S} into 
@@ -70,11 +69,21 @@ values as high as 80\%. \tf{I don't understand this last comment.}
 Figure \ref{fig:aLIGO_prec_allwvf} shows the relative error $\Delta$ as a function of the distance for the signals of the {\it test set}
 as well as the result when only noise is considered. This quantity follows the same trend than that followed by the coverage, since all signals but models {\texttt s11} and {\texttt s20S} are reconstructed with relative errors below 20\% up to distances of $\sim$ 15kpc. Correspondingly, the no-signal case yields the largest error, as expected.
 
-We perform the same analysis using the design sensitivity curve of AdV and expected sensitivity curves for the third-generation 
-GW detectors. The results for the former are reported in Table \ref{tab:results}. We focus now on third-generation detectors whose results are reported in Table \ref{tab:results} and shown in Fig.~\ref{fig:s20--SFHo_all3G}. In Europe the Einstein Telescope project proposes to host in a 10-km equilateral triangle configuration three low-power low-frequency cryogenic interferometers as well as three high-power high-frequency interferometers. Three sensitivity curves, ET-B, ET-C and ET-D corresponding to different options and stages of the project~\cite{Hild_2011} are considered in our study (cf.~Fig.~\ref{fig:spectrum}). The US based project Cosmic Explorer~\cite{reitze2019cosmic} is expecting to reach its design
-sensitivity circa 2040 through two phases labeled CE1 and CE2, whose sensitivity curves are also shown in Figure~\ref{fig:spectrum}. 
+We perform the same analysis using the design sensitivity curve of AdV and expected sensitivity curves for third-generation 
+GW detectors. The results for the former are reported in Table \ref{tab:results} and are discussed below. We focus now on third-generation detectors, presenting our findings in Table \ref{tab:results} and in Fig.~\ref{fig:s20--SFHo_all3G}. In Europe the Einstein Telescope project proposes to host in a 10-km equilateral triangle configuration three low-power, low-frequency, cryogenic interferometers as well as three high-power, high-frequency interferometers. Three sensitivity curves, ET-B, ET-C and ET-D corresponding to different options and stages of the project~\cite{Hild_2011} are considered in our study (cf.~Fig.~\ref{fig:spectrum}). The US based project Cosmic Explorer~\cite{reitze2019cosmic} is expecting to reach its design
+sensitivity circa 2040 through two phases labeled CE1 and CE2. Their corresponding sensitivity curves are also shown in Fig.~\ref{fig:spectrum}. 
 
-%%%
+Figure \ref{fig:s20--SFHo_all3G} displays $\Delta$ as a function of the source distance for the five third-generation detector configurations we analyze. As before, we use the {\texttt s20S} waveform model as a reference case.  This figure shows that,  overall, the ratio is well reconstructed up to distances in the range \unit[100--200]{kpc} which represents an improvement of a factor 10 with respect to Advanced LIGO and Advanced Virgo detectors. We can also note that the Einstein Telescope results lay in between the 2 Cosmic Explorer results. This is confirmed for all other waveforms, expect {\texttt s25}
+for which the maximal distance reach in CE2 is significantly lower than CE1. This is partly due to the
+small variation of the reconstruction quality to the distance of the source making the estimation of $d_r$
+rather uncertain for this waveform. All results are summarized in Table \ref{tab:results} and Figure
+\ref{fig:distances}. It is remarkable that with 3G detectors the ratio could be reconstructed for sources
+located up to several hundred of kpc. It is nevertheless important to note the rather wide range obtained
+for the different waveforms probing a large range of progenitor masses.
+We did not find any correlation between the mass of the progenitor and $d_r$, nor the equation of state.
+On the other hand, the quality
+of the ratio reconstruction depends on the signal-to-noise ratio, expressed in Table \ref{tab:results} by
+$d_{det}$.
 
 
 Table \ref{tab:results} reports the source distances $d_r$ in kpc at which the median of the coverage is lower than 95\% of the noise only values for aLIGO, AdV, and different configurations of third-generation detectors. We have checked that using either the median of the coverage or the median of $\Delta$ yield similar results for the distance.
@@ -91,22 +100,6 @@ Table \ref{tab:results} shows that the results for the Advanced Virgo detector a
 
 
 
-
-Figure \ref{fig:s20--SFHo_all3G} shows $\Delta$ as function of the source distance for {\texttt s20S}
-waveform for the five third-generation detector configurations we analyze. Overall, the ratio is well reconstructed up to distances
-in the range \unit[100--200]{kpc} which represents an improvement of a factor 10 with respect to
-Advanced LIGO and Advanced Virgo detectors. We can also note that the Einstein Telescope results lay in
-between the 2 Cosmic Explorer results. This is confirmed for all other waveforms, expect {\texttt s25}
-for which the maximal distance reach in CE2 is significantly lower than CE1. This is partly due to the
-small variation of the reconstruction quality to the distance of the source making the estimation of $d_r$
-rather uncertain for this waveform. All results are summarized in Table \ref{tab:results} and Figure
-\ref{fig:distances}. It is remarkable that with 3G detectors the ratio could be reconstructed for sources
-located up to several hundred of kpc. It is nevertheless important to note the rather wide range obtained
-for the different waveforms probing a large range of progenitor masses.
-We did not find any correlation between the mass of the progenitor and $d_r$, nor the equation of state.
-On the other hand, the quality
-of the ratio reconstruction depends on the signal-to-noise ratio, expressed in Table \ref{tab:results} by
-$d_{det}$.
 
 \begin{figure}
   \centering
