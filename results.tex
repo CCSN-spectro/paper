@@ -6,7 +6,8 @@
 \begin{figure}[t]
  \centering
  \includegraphics[width=0.5\textwidth]{plots/spectrum}
- \caption{Amplitude spectral density of the GW detectors aLIGO and AdV at design sensitivity and that of the proposed third-generation detectors Cosmic Explorer and Einstein Telescope. Einstein Telescope sensitivity curve ET-B is obtained pushing second-generation detector technology at its limit. ET-C and ET-D sensitivity curves correspond to a detector configuration where a low-power cryogenic low-frequency interferometer and a high-power room temperature high-frequency interferometer are sharing the same infrastructure~\cite{Hild_2011}. Cosmic Explorer design sensitivity will be achieved in two stages. Stage 1 (CE1) is expected to use the technology developed for the ``A+'' upgrade to aLIGO but scaled up to a 40 km detector while stage 2 (CE2) will implement state-of-the-art technology to decrease quantum and thermal noises~\cite{reitze2019cosmic}. } \label{fig:spectrum}
+ \caption{Amplitude spectral density of the GW detectors aLIGO and AdV at design sensitivity and that of the proposed third-generation detectors Cosmic Explorer and Einstein Telescope. Einstein Telescope sensitivity curve ET-B is obtained pushing second-generation detector technology at its limit. ET-C and ET-D sensitivity curves correspond to a detector configuration where a low-power cryogenic low-frequency interferometer and a high-power room temperature high-frequency interferometer are sharing the same infrastructure~\cite{Hild_2011}. Cosmic Explorer design sensitivity will be achieved in two stages. Stage 1 (CE1) is expected to use the technology developed for the ``A+'' upgrade to aLIGO but scaled up to a 40 km detector while stage 2 (CE2) will implement state-of-the-art technology to decrease quantum and thermal noises~\cite{reitze2019cosmic}. \tf{Use AdV in the legend instead of ADV.}} 
+ \label{fig:spectrum}
 \end{figure}
 
 \begin{figure}[t]
@@ -73,48 +74,22 @@ We perform the same analysis using the design sensitivity curve of AdV and expec
 GW detectors. The results for the former are reported in Table \ref{tab:results} and are discussed below. We focus now on third-generation detectors, presenting our findings in Table \ref{tab:results} and in Fig.~\ref{fig:s20--SFHo_all3G}. In Europe the Einstein Telescope project proposes to host in a 10-km equilateral triangle configuration three low-power, low-frequency, cryogenic interferometers as well as three high-power, high-frequency interferometers. Three sensitivity curves, ET-B, ET-C and ET-D corresponding to different options and stages of the project~\cite{Hild_2011} are considered in our study (cf.~Fig.~\ref{fig:spectrum}). The US based project Cosmic Explorer~\cite{reitze2019cosmic} is expecting to reach its design
 sensitivity circa 2040 through two phases labeled CE1 and CE2. Their corresponding sensitivity curves are also shown in Fig.~\ref{fig:spectrum}. 
 
-Figure \ref{fig:s20--SFHo_all3G} displays $\Delta$ as a function of the source distance for the five third-generation detector configurations we analyze. As before, we use the {\texttt s20S} waveform model as a reference case.  This figure shows that,  overall, the ratio is well reconstructed up to distances in the range \unit[100--200]{kpc} which represents an improvement of a factor 10 with respect to Advanced LIGO and Advanced Virgo detectors. We can also note that the Einstein Telescope results lay in between the 2 Cosmic Explorer results. This is confirmed for all other waveforms, expect {\texttt s25}
-for which the maximal distance reach in CE2 is significantly lower than CE1. This is partly due to the
-small variation of the reconstruction quality to the distance of the source making the estimation of $d_r$
-rather uncertain for this waveform. All results are summarized in Table \ref{tab:results} and Figure
-\ref{fig:distances}. It is remarkable that with 3G detectors the ratio could be reconstructed for sources
-located up to several hundred of kpc. It is nevertheless important to note the rather wide range obtained
-for the different waveforms probing a large range of progenitor masses.
-We did not find any correlation between the mass of the progenitor and $d_r$, nor the equation of state.
-On the other hand, the quality
-of the ratio reconstruction depends on the signal-to-noise ratio, expressed in Table \ref{tab:results} by
-$d_{det}$.
-
-
-Table \ref{tab:results} reports the source distances $d_r$ in kpc at which the median of the coverage is lower than 95\% of the noise only values for aLIGO, AdV, and different configurations of third-generation detectors. We have checked that using either the median of the coverage or the median of $\Delta$ yield similar results for the distance.
-The numbers on the table are an estimate of the order of magnitude of the source maximal distance at which a
-reconstruction of the ratio could be possible with current and planned GW detectors.
-They are also upper limits as we are taking into account the detector antenna response in our
-simulation but assume that the source is optimally oriented with a matched filter signal-to-noise ratio of 13. 
-Table \ref{tab:results} shows that the results for the Advanced Virgo detector at design sensitivity are very similar to those of aLIGO, despite the differences in detector sensitivity.
-%Note that Table \ref{tab:results} provides the distance at which one could detect a source
-%optimally oriented with a matched filter signal-to-noise ratio of 13.
-
-
-
-
-
-
-
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/s20--SFHo_all3G}
-  \caption{Median of $\Delta$ for {\texttt s20S} CCSN waveform embedded in 3G detectors noise and located at different distance from the Earth. } \label{fig:s20--SFHo_all3G}
+  \caption{Median of the relative error $\Delta$ as a function of the  distance to the source for the CCSN waveform model {\texttt s20S} embedded in third-generation detector noise.}
+  \label{fig:s20--SFHo_all3G}
 \end{figure}
 
-\begin{figure}
+Figure \ref{fig:s20--SFHo_all3G} displays $\Delta$ as a function of the source distance for the five third-generation detector configurations we analyze. As before, we use the {\texttt s20S} waveform model as a reference case.  This figure shows that,  overall, the ratio is well reconstructed up to distances in the range \unit[100--200]{kpc} which represents an order of magnitude improvement with respect to aLIGO and AdV. We also note that the results for the various Einstein Telescope configurations lay in between those of the two Cosmic Explorer designs. Moreover,  the detectability prospects for the former depend weakly on the detector configuration while the arrangement of CE2 yields better results than CE1. These results are confirmed for all other waveforms of our sample except for model {\texttt s25} for which the maximal distance reach in CE2 is significantly lower than CE1, as shown in Fig.~\ref{fig:distances}. This is partly due to the small variation of the reconstruction quality to the distance of the source making the estimation of $d_r$ rather uncertain for this particular waveform. \tf{Is this really understood? What's particular in this waveform?}
+
+\begin{figure}[t]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/dist_allwvfs_2G3G}
-  \caption{Maximal distance $d_{r}$ in kpc at which the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ is reconstructed
-    with good accuracy for a source optimally oriented with respect to the GW detectors for the 7 CCSN waveforms considered in this study.} \label{fig:distances}
+  \caption{Maximal distance at which the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ is reconstructed
+    with good accuracy for all GW detectors analyzed in this study. The values are shown for all eight CCSN waveforms of our sample assuming that the source is optimally oriented with respect to the detector. \tf{I guess that for CE2 s15G is overlapping with s25. Should we mention this in the caption? Use AdV instead of ADV?}} 
+\label{fig:distances}
 \end{figure}
-
-
 
 \begin{table}
   \centering
@@ -125,56 +100,58 @@ Table \ref{tab:results} shows that the results for the Advanced Virgo detector a
 \hline
 \multirow{3}{*}{aLIGO} & $d_{r}$   & 7 & 28 & 24  & 22 & 16 & 11 & 38 & 46 \\
 \cline{2-10}
-                       & $d_{det}$ & 11 & 36 & 26 & 27 & 21 & 16 & 74 & 61\\
+                       & $d_{\rm det}$ & 11 & 36 & 26 & 27 & 21 & 16 & 74 & 61\\
 %                      & SNR      & 14 & 46 & 33 & 35 & 27 & 21 & 96 & 80\\
 
 \hline
 \hline
-\multirow{3}{*}{ADV}   & $d_{r}$   & 7  & 26  & 20 & 19 & 15 & 10 & 43 & 42 \\
+\multirow{3}{*}{AdV}   & $d_{r}$   & 7  & 26  & 20 & 19 & 15 & 10 & 43 & 42 \\
 \cline{2-10}
-                       & $d_{det}$ &  10 & 32 & 22 & 23 & 18 & 13 & 64 & 52\\
+                       & $d_{\rm det}$ &  10 & 32 & 22 & 23 & 18 & 13 & 64 & 52\\
 %                      & SNR      &  13 & 41 & 29 & 30 & 23 & 17 &  83 & 68\\
 
 \hline
 \hline
 \multirow{2}{*}{CE1}   & $d_{r}$   & 79  & 304 & 258 & 229 & 187 & 115 & 524 & 490 \\
 \cline{2-10}
-                       & $d_{det}$ & 115 & 377 & 270 & 282 & 217 & 168 & 774  & 633\\
+                       & $d_{\rm det}$ & 115 & 377 & 270 & 282 & 217 & 168 & 774  & 633\\
 %                      & SNR      & 149 & 490 & 352 & 366 & 282 & 218 & 1006 & 822\\
 
 \hline
 \multirow{2}{*}{CE2}   & $d_{r}$  & 135 & 499 & 451 & 405 & 305 & 183 & 391 & 898 \\
 \cline{2-10}
-                       & $d_{det}$ & 197 & 649 & 468 & 489 & 375 & 294 & 1347  & 1100\\
+                       & $d_{\rm det}$ & 197 & 649 & 468 & 489 & 375 & 294 & 1347  & 1100\\
 %                      & SNR    & 256 & 843 & 608 & 635 & 487 & 382 & 1751 & 1430\\
 
 \hline
 \multirow{2}{*}{ET\_B} & $d_{r}$ & 71  & 293 & 248 & 245 & 158 & 123 & 113 & 392 \\
 \cline{2-10}
-                       & $d_{det}$ & 106 & 364 & 274 & 391 & 216 & 200 & 805 & 665\\
+                       & $d_{\rm det}$ & 106 & 364 & 274 & 391 & 216 & 200 & 805 & 665\\
 %                      & SNR      & 138 & 473 & 356 & 379 & 381 & 260 & 1046 & 865\\
 
 \hline
 \multirow{2}{*}{ET\_C} & $d_{r}$ & 75  & 302 & 239 & 237 & 172 & 131 & 239 & 446 \\
 \cline{2-10}
-                       & $d_{det}$ & 97 & 332 & 246 & 260 & 194 & 164 & 727  & 603\\
+                       & $d_{\rm det}$ & 97 & 332 & 246 & 260 & 194 & 164 & 727  & 603\\
 %                      & SNR      & 126 & 432 & 320 & 338 & 252 & 213 & 945 & 783\\
 
 \hline
 \multirow{2}{*}{ET\_D} & $d_{r}$ & 83  & 329 & 257 & 261 & 186 & 139 & 369 & 523 \\
 \cline{2-10}
-                       & $d_{det}$ & 107 & 368 & 271 & 285 & 213 & 174 & 796  & 661\\
+                       & $d_{\rm det}$ & 107 & 368 & 271 & 285 & 213 & 174 & 796  & 661\\
 %                      & SNR      & 140 & 477 & 352 & 371 & 277 & 227 & 1034 & 859 \\
 
   \end{tabular}
   \caption{%%
-    Maximal distance $d_{r}$ at which the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ is reconstructed
-    with good accuracy for a source optimally oreinted with respect to the GW detectors
-    considered in this study. $d_{det}$ is the distance at which one could detect a source
-    optimally oriented with a matched filter signal-to-noise ratio of 13 in the  different
-    GW detectors. All distances are expressed in kpc.
+  Maximal distance $d_{r}$ at which the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ is reconstructed
+    with good accuracy for all GW detectors analyzed in this study, assuming optimal orientation between the source and the detector. Correspondingly, $d_{\rm det}$ is the distance at which different interferometers could detect a source
+    optimally oriented with a matched filter signal-to-noise ratio of 13. All distances are expressed in kpc.
     %%
   }
   \label{tab:results}
 \end{table}
+
+All results for both second-generation and third-generation detectors are summarized in Table \ref{tab:results} and Figure
+\ref{fig:distances}. Table \ref{tab:results} reports the source distances $d_r$ in kpc at which the median of the coverage is lower than 95\% of the noise only values for aLIGO, AdV, and different configurations of third-generation detectors. This same information is displayed in Fig.~\ref{fig:distances}. We have checked that using either the median of the coverage or the median of $\Delta$ yields similar results for the distance. On the other hand, the quality of the ratio reconstruction and, thus, of the distance range, depends on the signal-to-noise ratio, expressed in Table \ref{tab:results} by $d_{\rm det}$. The numbers reported on the table for $d_r$ are an estimate of the order of magnitude of the maximal distance of the source  at which a
+reconstruction of the ratio could be possible with current and planned GW detectors. We also provide upper limits for $d_{\rm det}$ by taking into account the detector antenna response in our simulations and assuming that the source is optimally oriented with a matched filter signal-to-noise ratio of 13. Table \ref{tab:results} shows that the results for the Advanced Virgo detector at design sensitivity are very similar to those of aLIGO, despite the differences in detector sensitivity. It is remarkable that for third-generation detectors the PNS surface gravity  could be reconstructed for sources located up to a few hundreds of kpc. It is nevertheless important to note the rather wide range in distances we obtain for the different waveforms of our {\it test set} that probe a large range of progenitor masses. We do not find any correlation between either the mass of the progenitor nor the EOS with $d_r$.
 
