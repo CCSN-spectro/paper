@@ -3,12 +3,12 @@
 \section{Detectability prospects}
 \label{sec:results}
 
-\begin{figure}[t]
- \centering
- \includegraphics[width=0.5\textwidth]{plots/spectrum}
- \caption{Amplitude spectral density of the GW detectors aLIGO and AdV at design sensitivity and that of the proposed third-generation detectors Cosmic Explorer and Einstein Telescope. Einstein Telescope sensitivity curve ET-B is obtained pushing second-generation detector technology at its limit. ET-C and ET-D sensitivity curves correspond to a detector configuration where a low-power cryogenic low-frequency interferometer and a high-power room temperature high-frequency interferometer are sharing the same infrastructure~\cite{Hild_2011}. Cosmic Explorer design sensitivity will be achieved in two stages. Stage 1 (CE1) is expected to use the technology developed for the ``A+'' upgrade to aLIGO but scaled up to a 40 km detector while stage 2 (CE2) will implement state-of-the-art technology to decrease quantum and thermal noises~\cite{reitze2019cosmic}. \tf{Use AdV in the legend instead of ADV.}} 
- \label{fig:spectrum}
-\end{figure}
+%\begin{figure}[t]
+% \centering
+% \includegraphics[width=0.5\textwidth]{plots/spectrum}
+% \caption{Amplitude spectral density of the GW detectors aLIGO and AdV at design sensitivity and that of the proposed third-generation detectors Cosmic Explorer and Einstein Telescope. Einstein Telescope sensitivity curve ET-B is obtained pushing second-generation detector technology at its limit. ET-C and ET-D sensitivity curves correspond to a detector configuration where a low-power cryogenic low-frequency interferometer and a high-power room temperature high-frequency interferometer are sharing the same infrastructure~\cite{Hild_2011}. Cosmic Explorer design sensitivity will be achieved in two stages. Stage 1 (CE1) is expected to use the technology developed for the ``A+'' upgrade to aLIGO but scaled up to a 40 km detector while stage 2 (CE2) will implement state-of-the-art technology to decrease quantum and thermal noises~\cite{reitze2019cosmic}.} 
+% \label{fig:spectrum}
+%\end{figure}
 
 \begin{figure}[t]
   \centering
@@ -24,7 +24,7 @@
 To estimate how accurately we can infer the time evolution of $r(t)$ in the GW data of a single
 detector we inject the GW signal for model {\texttt s20S} into 
 100 Gaussian noise realisations whose power spectral density (PSD) follows the aLIGO
-spectrum~\cite{aLIGOsens:2018}. The PSD of aLIGO and AdV at design sensitivities, along with those of planned third-generation detectors, are shown in Figure~\ref{fig:spectrum}. 
+spectrum~\cite{aLIGOsens:2018}. %The PSD of aLIGO and AdV at design sensitivities, along with those of planned third-generation detectors, are shown in Figure~\ref{fig:spectrum}. 
 
 We cover a large range of distances for which a CCSN detection in second-generation GW detectors is feasible. We assume that the source is optimally oriented with respect to our single detector. Moreover, we also assume that a CCSN GW signal has been identified in the data and that the beginning of the signal is known within {$\mathcal O$}(10 ms). The data (signal embedded in noise) are whitened using the function {\tt prewhiten} of the R-package {\tt TSA}. An auto-regressive model with a maximum of maximal 100 coefficients is used.    
 
@@ -47,7 +47,7 @@ $\Delta$ takes large values, indicating that the method fails to accurately reco
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/aLIGO_coverage_allwvfs}
- \caption{Median of the coverage for the eight CCSN waveforms of the {\it test set} embedded in aLIGO noise as a function of the  distance to the source. \mab{The ``no signal'' line shows the median of coverage in absence of any signal. In this example, the median is null and overlaps with the horizontal axis. The blue band boundaries are given by the $\mathrm{5^{th}}$ and $\mathrm{95^{th}}$ percentiles of coverage in absence of any signal.} \tf{Perhaps is more consistent to use in the legend the same model names as in Table 1. Some of the colours are really hard to see, particularly for s20S. That could perhaps be improved if we use thicker lines. I'm confused about the quartiles shown.}} \label{fig:aLIGO_cov_allwvf}
+ \caption{Median of the coverage for the eight CCSN waveforms of the {\it test set} embedded in aLIGO noise as a function of the  distance to the source. \mab{The ``no signal'' line shows the median of coverage in absence of any signal. In this example, the median is null and overlaps with the horizontal axis. The blue band boundaries are given by the $\mathrm{5^{th}}$ and $\mathrm{95^{th}}$ percentiles of coverage in absence of any signal.}} \label{fig:aLIGO_cov_allwvf}
 \end{figure}
 
 \begin{figure}[t]
@@ -73,8 +73,9 @@ Figure \ref{fig:aLIGO_prec_allwvf} shows the relative error $\Delta$ as a functi
 as well as the result when only noise is considered. This quantity follows the same trend than that followed by the coverage, since all signals but models {\texttt s11} and {\texttt s20S} are reconstructed with relative errors below 20\% up to distances of $\sim$ 15kpc. Correspondingly, the no-signal case yields the largest error, as expected.
 
 We perform the same analysis using the design sensitivity curve of AdV and expected sensitivity curves for third-generation 
-GW detectors. The results for the former are reported in Table \ref{tab:results} and are discussed below. We focus now on third-generation detectors, presenting our findings in Table \ref{tab:results} and in Fig.~\ref{fig:s20--SFHo_all3G}. In Europe the Einstein Telescope project proposes to host in a 10-km equilateral triangle configuration three low-power, low-frequency, cryogenic interferometers as well as three high-power, high-frequency interferometers. Three sensitivity curves, ET-B, ET-C and ET-D corresponding to different options and stages of the project~\cite{Hild_2011} are considered in our study (cf.~Fig.~\ref{fig:spectrum}). The US based project Cosmic Explorer~\cite{reitze2019cosmic} is expecting to reach its design
-sensitivity circa 2040 through two phases labeled CE1 and CE2. Their corresponding sensitivity curves are also shown in Fig.~\ref{fig:spectrum}. 
+GW detectors. The results for the former are reported in Table \ref{tab:results} and are discussed below. We focus now on third-generation detectors, presenting our findings in Table \ref{tab:results} and in Fig.~\ref{fig:s20--SFHo_all3G}. In Europe the Einstein Telescope project proposes to host in a 10-km equilateral triangle configuration three low-power, low-frequency, cryogenic interferometers as well as three high-power, high-frequency interferometers. Three sensitivity curves, ET-B, ET-C and ET-D corresponding to different options and stages of the project~\cite{Hild_2011} are considered in our study. %(cf.~Fig.~\ref{fig:spectrum}).
+The US based project Cosmic Explorer~\cite{reitze2019cosmic} is expecting to reach its design
+sensitivity circa 2040 through two phases labeled CE1 and CE2. %Their corresponding sensitivity curves are also shown in Fig.~\ref{fig:spectrum}. 
 
 \begin{figure}[t]
   \centering
@@ -89,7 +90,7 @@ Figure \ref{fig:s20--SFHo_all3G} displays $\Delta$ as a function of the source d
   \centering
   \includegraphics[width=0.5\textwidth]{plots/dist_allwvfs_2G3G}
   \caption{Maximal distance at which the ratio $r=M_{\rm PNS}/R_{\rm PNS}^2$ is reconstructed
-    with good accuracy for all GW detectors analyzed in this study. The values are shown for all eight CCSN waveforms of our sample assuming that the source is optimally oriented with respect to the detector. Some waveform maximal distance markers are not visible because the do overlap (for instance \texttt{s15G} is overlapping with \texttt{s25} for CE2). \tf{Use AdV instead of ADV?}} 
+    with good accuracy for all GW detectors analyzed in this study. The values are shown for all eight CCSN waveforms of our sample assuming that the source is optimally oriented with respect to the detector. Some waveform maximal distance markers are not visible because the do overlap (for instance \texttt{s15G} is overlapping with \texttt{s25} for CE2).} 
 \label{fig:distances}
 \end{figure}
 
