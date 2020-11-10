@@ -3,7 +3,7 @@ PLOTS=$(addsuffix .pdf, $(addprefix plots/, $(OUTS)))
 
 all: ccsn.pdf
 
-ccsn.pdf: ccsn.tex introduction.tex methods.tex results.tex conclusion.tex biblio.bib
+ccsn.pdf: ccsn.tex introduction.tex simulations.tex methods.tex results.tex conclusion.tex biblio.bib
 	pdflatex ccsn.tex
 	bibtex ccsn
 	pdflatex ccsn.tex

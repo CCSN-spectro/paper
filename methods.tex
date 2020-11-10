@@ -5,7 +5,7 @@
 \begin{figure}[t]
  \centering
  \includegraphics[width=0.45\textwidth]{plots/model}
- \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from our \pcd{18} 1D simulations of the model set. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering the 18 simulation data points.  } 
+ \caption{Ratio $M_{\rm PNS}/R_{\rm PNS}^2$ from our 18 1D simulations of the model set. The solid line is the maximum likelihood estimate of heteroscedastic cubic model with 95\% confidence bands (dashed lines) considering the 18 simulation data points.} 
  \label{fig:LMVAR}
 \end{figure}
 
@@ -18,7 +18,7 @@ from the observation of the $\mbox{}^2g_2$ oscillation mode in the GW detector d
 %demonstrated in \cite{Torres:2019b}.
 To build the model of the ratio $r$ as a function of the frequency $f$ we use the 
 1D simulations of the {\it model set}. Figure~\ref{fig:LMVAR}
-shows the data for the $25$ numerical simulations. 
+shows the data for the $18$ numerical simulations. 
 %As identified by \cite{Torres:2019b}, the only systematic deviation from a single universal relation is the numerical code used in the simulations. 
 %To avoid any systematic effect, we only use the $18$ simulations performed with the {\sc AENUS-ALCAR}
 %code, which is the same code that was used in our test set.
@@ -82,7 +82,7 @@ Figure~\ref{fig:LMVAR}.
 {\it test set} discussed in Section \ref{sec:simulations}.}
 To describe the method we focus on the GW signal
 of model {\texttt s20S}, originally
-sampled at 16384 Hz but downsampled at 4096 Hz.
+sampled at \unit[16384]{Hz} but downsampled at \unit[4096]{Hz}.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
 autoregressive estimates~\cite{BrockwellPeterJ1991Tsta} of the local spectra for successive time intervals of 
 length 200 with a 90\% overlap.
@@ -109,8 +109,7 @@ the midpoint $t_i$ of each local time interval of the spectrogram and interpolat
 for values in between $t_i$. We then use our model given by Eq.~\eqref{eq:model1} to obtain
 estimates of the time evolution of the ratio together with 95\% confidence intervals.
 An example is given in Figure \ref{fig:ratio} where the red triangles are the point estimates and
-the grey bands represent 95\% confidence bands. The size of the red triangles is proportional to the magnitude of the $\mbox{}^2 g_2$-mode \pcd{frequency?} estimates.  
-\pcd{[PCD: By magnitude you mean the value of the frequency? ]}
+the grey bands represent 95\% confidence bands. The size of the red triangles is proportional to the magnitude of the $\mbox{}^2 g_2$-mode frequency estimates.
 Note that as the frequency of the $\mbox{}^2 g_2$-mode becomes higher our estimates show more uncertainty (bigger intervals) because our model allows for heterogeneous variance. Ratio values
 computed using the mass and radius values obtained from the simulation code (i.e.~the true values)
 are shown in black. In this example of a noise-free GW signal the coverage of our 95\% confidence band is 100\%
@@ -120,7 +119,7 @@ signal is embedded in noise. We also note that despite we have only explicitely 
 \begin{figure}
  \centering
  \includegraphics[width=0.5\textwidth]{plots/ratio}
- \caption{Comparison of the time evolution of the ratio $M_{\rm PNS}/R_{\rm PNS}^2$ estimated from the $\mbox{}^2 g_2$-mode of the {\texttt s20S} signal (shown by open triangles and by the 95\% confidence belt in grey) against the value derived from the PNS mass and radius given by the simulation code (shown by filled black circles).  The ratios \pcd{[PCD: size of the triangles?]} are represented proportionally to the magnitude of the $\mbox{}^2 g_2$-mode \pcd{frequency?} estimates.}
+ \caption{Comparison of the time evolution of the ratio $M_{\rm PNS}/R_{\rm PNS}^2$ estimated from the $\mbox{}^2 g_2$-mode of the {\texttt s20S} signal (shown by open triangles and by the 95\% confidence belt in grey) against the value derived from the PNS mass and radius given by the simulation code (shown by filled black circles). The size of the triangles are represented proportionally to the magnitude of the $\mbox{}^2 g_2$-mode frequency estimates.}
  \label{fig:ratio}
 \end{figure}
 
