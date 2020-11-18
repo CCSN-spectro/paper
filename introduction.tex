@@ -24,7 +24,7 @@ All multidimensional numerical simulations show the systematic appearance in tim
 %{The main feature appearing systematically in the GW spectrum of multidimensional numerical simulations is a strong and relatively narrow \mab{oscillation} 
 %
 during the post-bounce evolution of the system, with frequency rising 
-from about \unit[100]{Hz} up to a few kHz (at most) and a typical duration of \unit[0.5 -- 1]{s}. This feature has been interpreted as a continuously excited gravity mode (g-mode, see \citep{kokkotas,Friedman:2013} for a definition in this context) of the PNS \citep{murphy:09, mueller:13gw, Cerda:2013, Yakunin:2015, Kuroda:2016, Andresen:2017}. 
+from about \unit[100]{Hz} up to a few kHz (at most) and a typical duration of \unit[0.5 -- 1]{s}. This feature has been interpreted as a continuously excited gravity mode (g-mode, see \citep{kokkotas,Friedman:2013} for a definition in this context) of the PNS \citep{murphy:09, mueller:13gw, Cerda:2013, Yakunin:2015wra, Kuroda:2016, Andresen:2017}. 
 In these models the monotonic raise of the frequency of the mode is related to the contraction of the PNS. The {typical} frequencies of {these} modes make them interesting targets for
 %promising {source} for 
 ground-based GW interferometers. 
@@ -39,7 +39,17 @@ shows a good match to the mode frequencies and to the features observed in the G
 
 This reveals that it is posible to perform CCSN asteroseismology {under realistic conditions} and serves as a starting point to carry out inference of astrophysical parameters of PNSs. 
 Further work was presented in {\citep{Torres:2019b} who found that it is possible to derive simple relations} between the instantaneous frequency of the g-mode and the mass and radius of the PNS {at each time of the numerical evolutions}. These relations are universal as they do not depend {on the equation of state (EOS) or on the mass of the progenitor {and they only depend weakly on} the numerical code used {(see discussion in Section~\ref{sec:simulations})}. {Similar universal relations have been discussed by \citep{Sotani:2020a,Sotani:2020b} who also found that they do not depend on the dimensionality (1D, 2D or 3D) of the numerical simulation used as a background.
- 
+
+Many previous data analysis efforts focused on the reconstruction of the gravitational wave strain amplitude
+without assuming a particular signal model \citep{Summerscales:2008,Klimenko:2015ypf,CornLitt}. As numerical
+simulations became more available other methods using catalogs of waveforms have been proposed to
+identify the supernova explosion mechanism.
+Among them, principal component analysis helps at reducing the complexity of CCSN waveform catalogs to fewer
+parameters \citep{Heng:2009,roever:09,Edwards:2014,powell:2016,powell:2017,Roma:2019kcd}.
+The classification challenge is also well addressed with deep learning methods \citep{astone:2018,Chan:2019fuz}.
+
+    
+    
 {In this work we introduce a method to infer PNS properties, namely a combination of the mass and radius, using GW information. For this purpose we have developed an algorithm to  
 extract the time-frequency evolution of the main feature in the spectrograms of the GW emission of 2D simulations of CCSN. This feature corresponds to the $^2\rm{g}_2$ mode, according to the nomenclature used in \citep{Torres:2019b} (different authors may have slightly different naming convention). Next, we use the universal relations obtained by \citep{Torres:2019b}{, based on a set of 1D simulations,} to infer the time evolution of the ratio $M_{\rm PNS}/R_{\rm PNS}^2$ (the PNS surface gravity), where  $M_{\rm PNS}$ and $R_{\rm PNS}$ are the mass and the radius of the PNS.} Finally, using 2D CCSN waveform corresponding to different progenitor masses we estimate the performance of the algorithm for current and future generation of ground-based GW detectors.
 
