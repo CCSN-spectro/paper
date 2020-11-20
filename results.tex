@@ -24,7 +24,7 @@
 To estimate how accurately we can infer the time evolution of $r(t)$ in the GW data of a single
 detector we inject the GW signal for model {\texttt s20S} into 
 100 Gaussian noise realisations whose power spectral density (PSD) follows the aLIGO
-spectrum~\cite{aLIGOsens:2018}. %The PSD of aLIGO and AdV at design sensitivities, along with those of planned third-generation detectors, are shown in Figure~\ref{fig:spectrum}. 
+spectrum~\citep{aLIGOsens:2018}. %The PSD of aLIGO and AdV at design sensitivities, along with those of planned third-generation detectors, are shown in Figure~\ref{fig:spectrum}. 
 
 We cover a large range of distances for which a CCSN detection in second-generation GW detectors is feasible. We assume that the source is optimally oriented with respect to our single detector. Moreover, we also assume that a CCSN GW signal has been identified in the data and that the beginning of the signal is known within {$\mathcal O$}(10 ms). The data (signal embedded in noise) are whitened using the function {\tt prewhiten} of the R-package {\tt TSA}. An auto-regressive model with a maximum of maximal 100 coefficients is used.    
 
@@ -71,8 +71,8 @@ Figure \ref{fig:aLIGO_prec_allwvf} shows the relative error $\Delta$ as a functi
 as well as the result when only noise is considered. This quantity follows the same trend than that followed by the coverage, since all signals but models {\texttt s11} and {\texttt s20S} are reconstructed with relative errors below 20\% up to distances of $\sim$ 15kpc. Correspondingly, the no-signal case yields the largest error, as expected.
 
 We perform the same analysis using the design sensitivity curve of AdV and expected sensitivity curves for third-generation 
-GW detectors. The results for the former are reported in Table \ref{tab:results} and are discussed below. We focus now on third-generation detectors, presenting our findings in Table \ref{tab:results} and in Fig.~\ref{fig:s20--SFHo_all3G}. In Europe the Einstein Telescope project proposes to host in a 10-km equilateral triangle configuration three low-power, low-frequency, cryogenic interferometers as well as three high-power, high-frequency interferometers. Three sensitivity curves, ET\_B, ET\_C and ET\_D corresponding to different options and stages of the project~\cite{Hild_2011} are considered in our study. %(cf.~Fig.~\ref{fig:spectrum}).
-The US based project Cosmic Explorer~\cite{reitze2019cosmic} is expecting to reach its design
+GW detectors. The results for the former are reported in Table \ref{tab:results} and are discussed below. We focus now on third-generation detectors, presenting our findings in Table \ref{tab:results} and in Fig.~\ref{fig:s20--SFHo_all3G}. In Europe the Einstein Telescope project proposes to host in a 10-km equilateral triangle configuration three low-power, low-frequency, cryogenic interferometers as well as three high-power, high-frequency interferometers. Three sensitivity curves, ET\_B, ET\_C and ET\_D corresponding to different options and stages of the project~\citep{Hild_2011} are considered in our study. %(cf.~Fig.~\ref{fig:spectrum}).
+The US based project Cosmic Explorer~\citep{reitze2019cosmic} is expecting to reach its design
 sensitivity circa 2040 through two phases labeled CE1 and CE2. %Their corresponding sensitivity curves are also shown in Fig.~\ref{fig:spectrum}. 
 
 \begin{figure}[t]

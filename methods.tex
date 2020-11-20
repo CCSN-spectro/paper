@@ -36,8 +36,7 @@ variances is
 \begin{equation}
 \log \sigma_i=\alpha_0+ \alpha_1 f_i + \alpha_2 f_i^2 + \delta_i\,,
 \end{equation}
-with independent and identically zero-mean Gaussian errors $\delta_i$. The R-package \texttt{lmvar}
-\cite{lmvar:2019} that implements a maximum likelihood approach was used to fit the model.
+with independent and identically zero-mean Gaussian errors $\delta_i$. The R-package \texttt{lmvar}~\citep{lmvar:2019} that implements a maximum likelihood approach was used to fit the model.
 
 The best fitting model amongst polynomials of degree 1, 2, and 3  was chosen according to
 the Akaike information criterion with coefficients given in Table \ref{tab:model}, which is actually the model defined in \eqref{eq:model1}.  The data and fit of the model including 95\% confidence bands are displayed in
@@ -84,8 +83,7 @@ To describe the method we focus on the GW signal
 of model {\texttt s20S}, originally
 sampled at \unit[16384]{Hz} but downsampled at \unit[4096]{Hz}.
 A spectrogram of this signal is shown in Figure \ref{fig:spectrogram} based on
-autoregressive estimates~\cite{BrockwellPeterJ1991Tsta} of the local spectra for successive time intervals of 
-length 200 with a 90\% overlap.
+autoregressive estimates~\citep{BrockwellPeterJ1991Tsta} of the local spectra for successive time intervals of length 200 with a 90\% overlap.
 The dominant emission mode corresponds to the PNS oscillation $\mbox{}^2 g_2$-mode. We have
 developed a time-frequency method to track the ridge $m(t) $ in the spectrogram,
 taking into account that it is monotonically increasing with time. 
@@ -94,7 +92,7 @@ increases as the PNS becomes more massive and compact.
 Starting from either the left- or right-most column of the time-frequency matrix
 we identify and trace the sequence of amplitude peaks within a certain frequency
 band given the monotonicity constraint. Specific details about the reconstruction of the $\mbox{}^2 g_2$-mode ridge 
-are provided in Appendix \ref{app:gmode}. 
+are provided in Appendix~\ref{app:gmode}. 
 
 \begin{figure}
  \centering
