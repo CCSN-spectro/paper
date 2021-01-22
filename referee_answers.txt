@@ -44,9 +44,22 @@ this.
 polynomials in Eqs. (1) and (2)? Why is r_i of degree 3 and log
 sigma_i of degree 2?
 
-A: We have tested several combinations using s20 waveform (up to degree
-3 for both r_i and sigma_i) and have selected the best fitting model.
+A: Figure 1 gives an idea of the relationship between frequencies and 
+ratios, which is apparently quadratic.  However, we tested a bunch of 
+models, namely, linear, quadratic, cubic, and some other combinations.  
+We assessed their performance through the AIC criterion, getting the 
+cubic as the best model. This is explained in our article. 
 
+About the model for log-sigma, we tested only 2 models: a linear and a 
+quadratic. We found that the best model is the latter according to the AIC 
+criterion.  Higher order models cause that the iterative fitting procedure 
+does not converge in a satisfactory manner, which is warned by the authors 
+of the lmvar package.     
+
+Figure 1 shows that overall the model (for r and log sigma) fits 
+quite well the data set.
+
+We have rewritten that paragraph to clarify this.
 
 
 6. What do the red circles in Figure 1 represent? Is it a scatter plot
