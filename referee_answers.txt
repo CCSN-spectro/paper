@@ -59,7 +59,7 @@ of the lmvar package.
 Figure 1 shows that overall the model (for r and log sigma) fits 
 quite well the data set.
 
-We have rewritten that paragraph to clarify this.
+We have rewritten the corresponding paragraph to clarify this.
 
 
 6. What do the red circles in Figure 1 represent? Is it a scatter plot
