@@ -94,10 +94,10 @@ models, namely, linear, quadratic, cubic, and some other combinations.
 We assessed their performance through the AIC criterion, getting the 
 cubic as the best model. This is explained in the article. 
 
-About the model for log-sigma, we tested only 2 models: a linear and a 
+Regarding the model for log-sigma, we tested only 2 models: a linear and a 
 quadratic. We found that the best model is the latter according to the AIC 
-criterion.  Higher order models cause that the iterative fitting procedure 
-does not converge in a satisfactory manner, which is warned by the authors 
+criterion.  For higher order models, the iterative fitting procedure 
+does not converge which is also mentioned in a warning by the authors 
 of the lmvar package.     
 
 Figure 1 shows that overall the model (for r and log sigma) fits 
@@ -115,7 +115,7 @@ clarify (but I do not demand this).
 
 A: Each of the 18 1D simulations is providing data points r_i that are
 plotted as function of f_i. Each simulation has between 100 and 300
-points. All of them are plotted on Figure 1. We are included in this report
+points. All of them are plotted on Figure 1. We now included 
 the figure where each EOS is singled out with color (ratio_allmass.png).
 
 
