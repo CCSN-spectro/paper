@@ -100,8 +100,7 @@ criterion.  For higher order models, the iterative fitting procedure
 does not converge which is also mentioned in a warning by the authors 
 of the lmvar package.     
 
-Figure 1 shows that overall the model (for r and log sigma) fits 
-quite well the data set.
+Figure 1 shows that overall the model (for r and log sigma) fits the data set quite well.
 
 We have rewritten the corresponding paragraph to clarify this.
 
