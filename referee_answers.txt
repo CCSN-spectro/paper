@@ -15,6 +15,24 @@ the dominant component to f- and g-modes (Radice et al. (2019), ApJL,
 the possible impact on model predictions if the signal is hybrid in
 nature.
 
+A. We believe that a discussion of the nature of the modes is out of 
+the scope of this paper. As the referee points out correctly, our model 
+assumes that the GW signal is dominated by a g-mode, whose time-frequency 
+evolution is related to the evolution of the ratio M/R^2. In Torres-Forne 
+et al. Phys. Rev. Lett. 123, 051102 (2019) fits to the various modes (f, p, 
+and g) that appear in the spectrograms of a number of CCSN simulations were 
+discussed, and universal relations for the frequency evolution were proposed.
+The best fit for the dominant feature found in all simulations was that 
+corresponding to what was identified as a g-mode. We agree with the referee 
+that uncertainties remain on the actual nature of the various modes identified 
+in simulations performed by various groups. Further work is certainly necessary 
+to clarify this issue, not only egarding three-dimensional simulations but also 
+regarding the development of improved perturbative models for mode identification 
+that incorporate 3D effects and rotation in a more accurate way that existing 
+approaches. The current uncertainty in the identification of the modes at work 
+during the evolution of a PNS, while must definitely be removed, is of no 
+importance for the message that this paper conveys.
+
 2. Most analysis of GW signals is based on two-dimensional models, and
 the test set used in the present study is also comprised of 2D
 simulations. Recent comparisons of signals from 2D and 3D simulations
@@ -28,6 +46,18 @@ signals from 2D and 3D simulations (e.g., the low frequency signal
 from the spiral SASI mode) that could compromise the accuracy of the
 model derived here? Please discuss this.
 
+A. The referee is correct. A reduction in the amplitude of the GW signal
+would reduce the detectability distance. Regarding the model we put forward
+in this paper, it is indeed possible that the physical effects that only 
+appear in 3D CCSN simulations could alter the relationship between the 
+mode frequencies and the PNS properties that we have used in this paper. 
+This work, thus, is far from providing the final word on the detectability
+prospects of GW signals from PNS evolution, but it certainly serves the 
+purpose of offering a promising proof-of-concept and a framework upon which 
+to build a better model. We plan to use data from 3D simulations to improve 
+our model and to study the differences in the relationships among 1D, 2D and 
+3D simulations.
+
 3. Are the 2D simulations new (i.e., computed for the present paper),
 or have they been published elsewhere? If they have been published
 elsewhere, please provide citation. Were any of the 2D simulations
@@ -36,9 +66,23 @@ CFL condition? If so, could this restriction potentially suppress
 modes that would otherwise have been excited by instabilities in the
 PNS?
 
+A. The simulations are new, except the s20 which was used in Torres-Forne 
+et al. Phys. Rev. Lett. 123, 051102 (2019). We avoid the severe time step 
+restriction near the centre by applying a coarsening scheme to the hydrodynamic 
+and neutrino data.  Where the lateral grid width is smaller than the radial 
+one (in the innermost ~ 10 km), we combine in theta-direction several grid cells 
+of the original grid to larger cells.  The resulting effective time step criterion 
+is identical to the radial one, i.e., corresponding to several 100 m.  That way, 
+we save up to two orders of magnitude in computing time.  This method does not 
+imply a reduction to spherical symmetry close to the origin, but maintains the 
+two-dimensional nature and allows for angular flows such as the modes generating the GW signal.
+
 4. How do you define R_{PNS} in the 1D and 2D simulations? Is it the
 radius for which the density achieves a specific value? Please clarify
 this.
+
+A. R_{PNS} is defined as the radius where the density becomes lower than
+10^12 gr/cm^3.
 
 5. Can you elaborate on the motivation for the degrees of the
 polynomials in Eqs. (1) and (2)? Why is r_i of degree 3 and log
@@ -48,7 +92,7 @@ A: Figure 1 gives an idea of the relationship between frequencies and
 ratios, which is apparently quadratic.  However, we tested a bunch of 
 models, namely, linear, quadratic, cubic, and some other combinations.  
 We assessed their performance through the AIC criterion, getting the 
-cubic as the best model. This is explained in our article. 
+cubic as the best model. This is explained in the article. 
 
 About the model for log-sigma, we tested only 2 models: a linear and a 
 quadratic. We found that the best model is the latter according to the AIC 
