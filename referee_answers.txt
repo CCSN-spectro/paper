@@ -56,7 +56,15 @@ prospects of GW signals from PNS evolution, but it certainly serves the
 purpose of offering a promising proof-of-concept and a framework upon which 
 to build a better model. We plan to use data from 3D simulations to improve 
 our model and to study the differences in the relationships among 1D, 2D and 
-3D simulations.
+3D simulations. We have added a comment on this important caveat in the conclusion.
+
+"Moreover, we have used 2D CCSN simulations
+that are known to produce higher amplitude GW signals
+than 3D CCSN simulations [60, 61]. This fact and the
+low frequency standing accretion shock instability that
+appears only in 3D simulations may reduce further the
+performance of the method."
+
 
 3. Are the 2D simulations new (i.e., computed for the present paper),
 or have they been published elsewhere? If they have been published
@@ -82,7 +90,7 @@ radius for which the density achieves a specific value? Please clarify
 this.
 
 A. R_{PNS} is defined as the radius where the density becomes lower than
-10^12 gr/cm^3.
+10^12 gr/cm^3. This definition has been added in the text.
 
 5. Can you elaborate on the motivation for the degrees of the
 polynomials in Eqs. (1) and (2)? Why is r_i of degree 3 and log
@@ -105,6 +113,15 @@ quite well the data set.
 
 We have rewritten the corresponding paragraph to clarify this.
 
+"For the mean of the ratios $r_i$ , the cubic model has the
+best fitting amongst polynomials of lower degrees, and
+for the mean of the log standard deviation $\rm log \sigma_i$ , the
+quadratic model has the best fit compared to a polynomial
+of degree one. The models were compared according
+to the Akaike information criterion. The estimated coefficients
+are given in Table II and the data and fit of the
+final model including 95\% confidence bands are displayed
+in Figure 1."
 
 6. What do the red circles in Figure 1 represent? Is it a scatter plot
 of the results from all 1D simulations taken together? Specifically,
