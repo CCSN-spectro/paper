@@ -41,8 +41,15 @@ parameters~\citep{Heng:2009,roever:09,Edwards:2014,powell:2016,powell:2017,Roma:
 The classification challenge is also well addressed with deep learning methods~\citep{astone:2018,Chan:2019fuz}.
     
 {In this work we introduce a method to infer PNS properties, namely a combination of the mass and radius, using GW information. For this purpose we have developed an algorithm to  
-  extract the time-frequency evolution of the main feature in the spectrograms of the GW emission of 2D simulations of CCSN. This feature corresponds to the $^2\rm{g}_2$ mode, according to the nomenclature used in~\citep{Torres:2019b} (different authors may have slightly different naming convention). Next, we use the universal relations obtained by~\citep{Torres:2019b}, based on a set of 1D simulations, to infer the time evolution of the ratio $M_{\rm PNS}/R_{\rm PNS}^2$ (the PNS surface gravity), \textcolor{red}{where $M_{\rm PNS}$ is the mass of the PNS and $R_{\rm PNS}$ is the radius where the density is lower than \unit[$10^{12}$]{$\rm g/cm^3$}}.
+  extract the time-frequency evolution of the main feature in the spectrograms of the GW emission of 2D simulations of CCSN. This feature corresponds to the $^2\rm{g}_2$ mode, according to the nomenclature used in~\citep{Torres:2019b} 
+ %(different authors may have slightly different naming convention)
+Next, we use the universal relations obtained by~\citep{Torres:2019b}, based on a set of 1D simulations, to infer the time evolution of the ratio $M_{\rm PNS}/R_{\rm PNS}^2$ (the PNS surface gravity), \textcolor{red}{where $M_{\rm PNS}$ is the mass of the PNS and $R_{\rm PNS}$ is the radius where the density is lower than \unit[$10^{11}$]{$\rm g/cm^3$}}.
 %  where  $M_{\rm PNS}$ and $R_{\rm PNS}$ are the mass and the radius of the PNS.
+\textcolor{red}{This same mode has been interpreted in some works as a f or a p-mode
+\citep[e.g.][]{Sotani:2016,Radice:2018usf,Mezzacappa:2020lsn}. 
+However, this does not affects our analysis, which 
+only uses the relation between the frequency of the main mode emitting in GWs (regardless
+of its nature) and the properties of the PNS.}    
 Finally, using 2D CCSN waveform corresponding to different progenitor masses we estimate the performance of the algorithm for current and future generation of ground-based GW detectors.
 
 This paper is organized as follows. Section II provides details of the CCSN simulations used in our work. The algorithm that we employ to extract the time evolution of the PNS surface gravity is discussed in Section III. Section IV shows the performance of our inference method and presents our main results. Finally, our findings are summarized in Section V. Appendix A discusses specific details related to the reconstruction of the g-mode.
