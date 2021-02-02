@@ -147,8 +147,8 @@ clarify (but I do not demand this).
 
 A: Each of the 18 1D simulations is providing data points r_i that are
 plotted as function of f_i. Each simulation has between 100 and 300
-points. All of them are plotted on Figure 1. We now included 
-the figure where each EOS is singled out with color (ratio_allmass.png).
+points. All of them are plotted on Figure 1. We share with the referee 
+a figure where each EOS is singled out with color (ratio_allmass.png).
 
 
 
