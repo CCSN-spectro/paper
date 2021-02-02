@@ -33,8 +33,8 @@ to clarify this issue, not only regarding three-dimensional simulations but also
 regarding the development of improved perturbative models for mode identification 
 that incorporate 3D effects and rotation in a more accurate way that existing 
 approaches. The current uncertainty in the identification of the modes at work 
-during the evolution of a PNS, while must definitely be removed, is of no 
-importance for the message that this paper conveys.
+during the evolution of a PNS is of no importance for the message that this
+paper conveys.
 
 We have modified slightly the text in page 2 to clarify this:
 
@@ -75,7 +75,7 @@ this important caveat in the conclusion.
 
 "Moreover, we have used 2D CCSN simulations
 that are known to produce higher amplitude GW signals
-than 3D CCSN simulations [60, 61]. This fact and the
+than 3D CCSN simulations [48, 49]. This fact and the
 low frequency standing accretion shock instability that
 appears only in 3D simulations may reduce further the
 performance of the method."
@@ -124,7 +124,8 @@ criterion.  For higher order models, the iterative fitting procedure
 does not converge which is also mentioned in a warning by the authors 
 of the lmvar package.     
 
-Figure 1 shows that overall the model (for r and log sigma) fits the data set quite well.
+Figure 1 shows that overall the model (for r and log sigma) fits the
+data set quite well.
 
 We have rewritten the corresponding paragraph to clarify this.
 
